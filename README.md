@@ -31,3 +31,11 @@
   **User Story 18:** Como administrador, quero gerar relatórios consolidados de desempenho dos alunos para avaliar o progresso dos alunos. <br>
   **User Story 19:** Como professor, quero ver métricas de desempenho dos meus alunos para ajustar meu ensino conforme necessário. <br>
   **User Story 20:** Como aluno, quero ver meu progresso ao longo do curso para acompanhar meu desenvolvimento. <br>
+
+## Cronograma <br> 
+
+![Cronograma Trello](https://github.com/Porygon-Users/API-Porygon/assets/145280630/71087ab9-1e1b-43eb-bdaa-ffcd2af770c8)
+
+## Sprints <br>
+
+
