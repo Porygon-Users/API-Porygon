@@ -1,7 +1,7 @@
 # API-Porygon<br>
 
 ## Integrantes: <br>
-  Carlos Eduardo Costa, Paloma Soares Rocha, Guilherme Bezerra Junqueira , Samara Cristina Viana de Abreu, Lucas Alexandre dos Santos Silva, Isaque Souza Costa, João Pedro Bispo de Almeida Cardoso Marcondes
+  Carlos Eduardo Costa, Paloma Soares Rocha, Guilherme Bezerra Junqueira , Samara Cristina Viana de Abreu, Lucas Alexandre dos Santos Silva, Isaque de Souza Costa, João Pedro Bispo de Almeida Cardoso Marcondes
 
 ## Desafio Proposto: <br>
   O desafio é criar um SI que permita a PBLTeX gerenciar e acompanhar os scores dos alunos, para calcular o FEE em seus cursos baseados em PBL.
