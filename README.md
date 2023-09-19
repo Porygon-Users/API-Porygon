@@ -10,6 +10,7 @@
   Desenvolver um SI que cumpra com as finalidades propostas.
 
 ## Backlog: <br>
+
   **User Story 1:** Como administrador, quero permitir o cadastro de alunos e professores para que possam acessar o sistema. <br>
   **User Story 8:** Como administrador, quero configurar datas de início e término do semestre para que o calendário acadêmico seja definido. <br>
   **User Story 2:** Como professor, quero poder criar turmas para uma sala específica do curso e associar os alunos nelas para que as aulas possam ser organizadas. <br> 
