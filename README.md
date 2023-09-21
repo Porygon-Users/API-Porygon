@@ -4,12 +4,12 @@
 
 <p align = "center">
 <a href="#Integrantes">Integrantes</a> •
-<a href="#Desafio Proposto">Tema</a> •
+<a href="#Desafio Proposto">Desafio Proposto</a> •
 <a href="#Objetivo">Objetivo</a> •
 <a href="#backlog-do-produto">Backlog do Produto</a> •
-<a href="#Cronograma">Objetivo</a>
+<a href="#Cronograma">Cronograma</a>
   
-## Integrantes <br>
+## Integrantes
 | NOME | ATRIBUIÇÃO | REDES SOCIAIS    | IDENTIFICAÇÃO |
 | :-----:| :----------: | :-------------:   | :-------------: |  
 | João Pedro | Scrum Master  | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/seunome) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/seunome) | <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/b24402c4-748c-4d21-bc9e-f81200369d18" height="60" />
@@ -21,19 +21,19 @@
 | Guilherme | Desenvolvedor | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/seunome) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/seunome)| <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/8333ed84-8db6-4bf5-9650-7783862c1995" height="60"/>
 | Samara | Desenvolvedor | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/seunome) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/seunome)| <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/2c34877d-b50d-4c26-9e0a-466c72230d80" height="60"/>
 
-## Desafio Proposto <br>
+## Desafio Proposto
 > O desafio é criar um SI que permita a PBLTeX gerenciar e acompanhar os scores dos alunos, para calcular o FEE em seus cursos baseados em PBL.
 
-## Objetivo <br>
+## Objetivo
 > Desenvolver um SI que cumpra com as finalidades propostas.
 
-## Backlog do Produto <br>
+## Backlog do Produto
 
 | User Story   | Descrição  | Valor | Sprint | Status |
 |:------------:|:----------:|:-----:|:------:|:------:|
 | User Story 1 |  Cadastro de Alunos e Professores | Alto | 1 | Concluído | 
 
-## Cronograma <br> 
+## Cronograma
 
 ![Cronograma Trello](https://github.com/Porygon-Users/API-Porygon/assets/145280630/71087ab9-1e1b-43eb-bdaa-ffcd2af770c8)
 
