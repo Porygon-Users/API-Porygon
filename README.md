@@ -1,6 +1,6 @@
 # <p align = "center"> API - 1° Semestre - Banco de Dados 2023 
 
-<p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/481ea87a-3140-4df0-9c98-faf89f4501e0" alt="Capa" style="width:600px;height:350px;"></p>
+<p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/e4438dc1-1bff-47b2-8555-d557eeeb4e65" alt="Capa" style="width:400px;height:350px;"></p>
 
 <p align = "center">
 <a href="#Integrantes">Integrantes</a> •
