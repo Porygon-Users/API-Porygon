@@ -3,11 +3,11 @@
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/481ea87a-3140-4df0-9c98-faf89f4501e0" alt="Capa" style="width:600px;height:350px;"></p>
 
 <p align = "center">
-[Integrantes](#integrantes)
-[Desafio Proposto](#desafio-proposto)
-[Objetivo](#objetivo)
-[Backlog do Produto](#backlog-do-produto)
-[Cronograma](#cronograma)
+<a href="#Integrantes">Integrantes</a> •
+<a href="#Desafio Proposto">Desafio Proposto</a> •
+<a href="#Objetivo">Objetivo</a> •
+<a href="#Backlog do Produto">Backlog do Produto</a> •
+<a href="#Cronograma">Cronograma</a>
   
 ## Integrantes
 <a name="integrantes"></a>
