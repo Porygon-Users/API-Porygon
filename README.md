@@ -1,5 +1,4 @@
 # <p align = "center"> API - 1° Semestre - Banco de Dados 2023 
-
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/8c66b2a8-7371-4ede-b323-05caf21f7914" alt="Capa" style="width:700px;height:400px;"></p>
 
 <p align = "center">
@@ -8,7 +7,8 @@
 <a href="#Objetivo">Objetivo</a> •
 <a href="#Backlog do Produto">Backlog do Produto</a> •
 <a href="#Cronograma">Cronograma</a> •
-<a href="#Ferramentas Utilizadas">Ferramentas Utilizadas</a>
+<a href="#Ferramentas Utilizadas">Ferramentas Utilizadas</a> •
+<a href="#Etapas">Etapas</a> 
   
 ## Integrantes
 <a name="Integrantes"></a>
@@ -67,3 +67,9 @@ instituições tradicionais já conceituadas no mercado. O desafio será de apoi
 <img align="center" alt="Trello" height="40" width="40" src="https://www.onlinemarketingtools.pro/wp-content/uploads/2018/11/Trello-logo.png" />
 <img align="center" alt="Python" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/5f1f1dc0-a138-4292-80ae-8a153184efb5" />
 <img align="center" alt="Teams" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/e6452644-c354-4636-a97c-12b5df1ea47e" />
+
+## Etapas
+<a name="Etapas"></a>
+<p align="left"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/e53683a8-1a0d-4dd2-be8d-b32a8442436c" alt="Capa" style="width:700px;height:400px;"></p>
+<p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/a7819f4f-1761-4152-8232-6753bd59fb77" alt="Capa" style="width:700px;height:400px;"></p>
+<p align="right"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/91b86b94-90b0-4497-9e5d-3b0c7df8fbca" alt="Capa" style="width:700px;height:400px;"></p>
