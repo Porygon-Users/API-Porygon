@@ -7,7 +7,8 @@
 <a href="#Desafio Proposto">Desafio Proposto</a> •
 <a href="#Objetivo">Objetivo</a> •
 <a href="#Backlog do Produto">Backlog do Produto</a> •
-<a href="#Cronograma">Cronograma</a>
+<a href="#Cronograma">Cronograma</a> •
+<a href="#Ferramentas Utilizadas">Ferramentas Utilizadas</a>
   
 ## Integrantes
 <a name="Integrantes"></a>
@@ -58,3 +59,11 @@ instituições tradicionais já conceituadas no mercado. O desafio será de apoi
 <a name="Cronograma"></a>
 ![Cronograma Trello](https://github.com/Porygon-Users/API-Porygon/assets/145280630/71087ab9-1e1b-43eb-bdaa-ffcd2af770c8)
 
+## Ferramentas Utilizadas
+<a name="Ferramentas Utilizadas"></a>
+<img align="center" alt="Canvas" height="40" width="40" src="https://carmentune.com/wp-content/uploads/Canva-logo-1024x1024.png" />
+<img align="center" alt="Github" height="40" width="40" src="https://pngimg.com/uploads/github/github_PNG51.png" />
+<img align="center" alt="Vscode" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+<img align="center" alt="Trello" height="40" width="40" src="https://www.onlinemarketingtools.pro/wp-content/uploads/2018/11/Trello-logo.png" />
+<img align="center" alt="Python" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/5f1f1dc0-a138-4292-80ae-8a153184efb5" />
+<img align="center" alt="Teams" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/e6452644-c354-4636-a97c-12b5df1ea47e" />
