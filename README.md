@@ -24,11 +24,12 @@
 
 ## Desafio Proposto
 <a name="Desafio Proposto"></a>
-> O desafio é criar um SI que permita a PBLTeX gerenciar e acompanhar os scores dos alunos, para calcular o FEE em seus cursos baseados em PBL.
+> A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
+instituições tradicionais já conceituadas no mercado. O desafio será de apoiar a instituição a levantar, especificar e desenvolver uma solução computacional que viabilize a aplicação desta técnica diferenciada.
 
 ## Objetivo
 <a name="Objetivo"></a>
-> Desenvolver um SI que cumpra com as finalidades propostas.
+> Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
 
 ## Backlog do Produto
 <a name="Backlog do Produto"></a>
@@ -52,7 +53,6 @@
 | User Story 16 | Visualização de Notas de Ciclos Anteriores pelos Alunos | Baixo | 3 | ❌ | 
 | User Story 17 | Geração de Relatórios Consolidados de Desempenho dos Alunos pelo Administrador | Alto | 4 | ❌ | 
 | User Story 18 | Visualização de Progresso ao Longo do Curso pelo Aluno | Médio | 4 | ❌ | 
-
 
 ## Cronograma
 <a name="Cronograma"></a>
