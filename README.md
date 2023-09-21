@@ -31,7 +31,7 @@
 > Desenvolver um SI que cumpra com as finalidades propostas.
 
 ## Backlog do Produto
-<a name="Backlodo Produto"></a>
+<a name="Backlog do Produto"></a>
 | User Story   | Descrição  | Valor | Sprint | Status |
 |:------------:|:----------:|:-----:|:------:|:------:|
 | User Story 1 |  Cadastro de Alunos e Professores | Alto | 1 | Concluído | 
