@@ -55,7 +55,7 @@ while True:
     print("\nOpções:")
     print("1. Adicionar alunos às turmas")
     print("2. Ver alunos disponíveis e não alocados")
-    print("3. Sair do programa")
+    print("3. Sair do programa", "\n")
     
     escolha = input("Escolha a opção (1, 2 ou 3): ")
     
@@ -64,18 +64,18 @@ while True:
         abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
         
         if not abas_turmas:
-            print("Não foram encontradas abas de turma na planilha.")
+            print("\nNão foram encontradas abas de turma na planilha.", "\n")
         else:
             print("Turmas existentes:")
             for turma in abas_turmas:
                 print(turma)
             
             # Solicitar ao usuário qual turma deseja adicionar os alunos
-            turma_desejada = input("Em qual turma deseja adicionar os alunos: ")
+            turma_desejada = input("\nEm qual turma deseja adicionar os alunos: ")
             if turma_desejada in abas_turmas:
                 quantidade_alunos = int(input("Quantos alunos deseja adicionar: "))
                 adicionar_alunos_a_turma(planilha, turma_desejada, alunos_adicionados, quantidade_alunos)
-                print(f"{quantidade_alunos} alunos adicionados com sucesso à {turma_desejada}")
+                print(f"{quantidade_alunos} alunos adicionados com sucesso à {turma_desejada}", "\n")
             else:
                 print("Turma não encontrada.")
     elif escolha == '2':
@@ -92,10 +92,10 @@ while True:
             if not aluno_em_turma(planilha, aluno_chave):
                 alunos_nao_alocados += 1
                 
-        print(f"Alunos disponíveis para alocação: {alunos_nao_alocados}")
+        print(\nf"Alunos disponíveis para alocação: {alunos_nao_alocados}")
     elif escolha == '3':
         break
     else:
-        print("Opção inválida. Escolha 1 para adicionar alunos, 2 para verificar alunos disponíveis ou 3 para sair.")
+        print("\nOpção inválida. Escolha 1 para adicionar alunos, 2 para verificar alunos disponíveis ou 3 para sair.", "\n")
 
-print("Programa encerrado.")
+print("\nPrograma encerrado.", "\n")
