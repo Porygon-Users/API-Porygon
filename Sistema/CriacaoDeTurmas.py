@@ -48,44 +48,42 @@ def criar_grupo(planilha, turma_nome, grupo_nome):
     else:
         turma_sheet = planilha[turma_nome]
         grupo_sheet_name = f'Grupos_{turma_nome}'
-        grupo_sheet = planilha.create_sheet(title=grupo_sheet_name)
+
+        # Verificar se a página de grupos já existe
+        if grupo_sheet_name in planilha.sheetnames:
+            grupo_sheet = planilha[grupo_sheet_name]
+        else:
+            grupo_sheet = planilha.create_sheet(title=grupo_sheet_name)
+            print(f"Página de grupos criada para a turma '{turma_nome}'.")
+
+        # Verificar se o grupo já existe na página de grupos
+        grupos_existentes = grupo_sheet.cell(row=1, column=1).value
+        if grupos_existentes:
+            grupos = grupos_existentes.split(', ')
+            if grupo_nome in grupos:
+                print(f"O grupo '{grupo_nome}' já existe na turma '{turma_nome}'.")
+                return
+            else:
+                grupos.append(grupo_nome)
+                novo_grupos = ', '.join(grupos)
+                grupo_sheet.cell(row=1, column=1, value=novo_grupos)
+        else:
+            grupo_sheet.cell(row=1, column=1, value=grupo_nome)
+
+        # Calcular a posição para a nova coluna
+        nova_coluna = len(grupos_existentes.split(', ')) if grupos_existentes else 1
+        coluna_letra = chr(65 + (nova_coluna * 2))  # Incrementa o deslocamento a cada novo grupo
+
+        # Adicionar o nome do grupo na célula correspondente
+        grupo_sheet[f'{coluna_letra}1'] = grupo_nome
         print(f"Grupo '{grupo_nome}' criado com sucesso na turma '{turma_nome}'.")
-        
-        # Split group names
-        grupos = grupo_nome.split(',')
-        
-        # Iterate over each group
-        for idx, grupo in enumerate(grupos, start=0):
-            # Calculate the starting column for each group (skip 2 columns for each group)
-            col_start = idx * 2  # Adjust to start at column 1 and leave one blank column between groups
-            
-            # Convert the starting column index to Excel column letter (A, D, F, ...)
-            col_letter = chr(65 + col_start)  # Convert index to Excel column letter
-            grupo_sheet[f'{col_letter}1'] = grupo.strip()
-            
-            # Set an empty column in between each group
-            if idx < len(grupos) - 1:
-                empty_col_letter = chr(65 + col_start + 1)  # The next column
-                grupo_sheet[f'{empty_col_letter}1'] = ''  # Empty header to create a blank column
-                
-            # Find the students for this group and add them below the group name
-            for row_idx in range(1, turma_sheet.max_row + 1):
-                turma_cell = turma_sheet.cell(row=row_idx, column=1)
-                if turma_cell.value == grupo.strip():
-                    # Adjust the column to the correct one for this group
-                    target_col_letter = chr(65 + col_start)  # Adjusted column
-                    grupo_sheet[f'{target_col_letter}{row_idx}'] = turma_cell.value
 
         if 'Sheet' in planilha.sheetnames:
             default_sheet = planilha['Sheet']
             planilha.remove(default_sheet)
 
-
-
-
 # Dicionário para rastrear a última linha de cada grupo
 ultima_linha_por_grupo = {}
-
 
 # Função para verificar se o aluno está na turma
 def verificar_aluno_na_turma(planilha, turma_nome, aluno_nome):
@@ -113,7 +111,7 @@ def adicionar_aluno_grupo(planilha, turma_nome, grupo_nome):
 
         # Encontre a coluna correspondente ao grupo
         coluna_grupo = None
-        for col_idx in range(1, grupo_sheet.max_column + 1, 2):  # Skip 2 columns for each group
+        for col_idx in range(1, grupo_sheet.max_column + 1, 2):  # Pula 1 coluna para cada grupo criado
             if grupo_sheet.cell(row=1, column=col_idx).value == grupo_nome:
                 coluna_grupo = col_idx
                 break
@@ -142,7 +140,6 @@ def adicionar_aluno_grupo(planilha, turma_nome, grupo_nome):
         else:
             print(f"Grupo '{grupo_nome}' não encontrado na turma '{turma_nome}'.")
 
-            
 # Nome do arquivo para a planilha
 nome_arquivo = "cadastro_turmas.xlsx"
 
@@ -150,20 +147,26 @@ nome_arquivo = "cadastro_turmas.xlsx"
 planilha = criar_ou_carregar_planilha(nome_arquivo)
 
 while True:
-    print("Escolha uma opção:")
+    print("\n\nEscolha uma opção:")
     print("1. Criar turma")
     print("2. Visualizar turmas")
     print("3. Adicionar aluno a turma")
     print("4. Criar grupo em uma turma")
     print("5. Adicionar aluno a um grupo de uma turma")
-    print("6. Sair")
+    print("6. Adicionar grupo a uma turma existente")
+    print("7. Sair")
     escolha = input("Opção: ")
+    print("\n\n")
 
     if escolha == '1':
+        while True:
+            nome_turma = input("Digite o nome da turma (ou 's' para sair) : ").lower()
         
-        nome_turma = input("Digite o nome da turma: ")
-        nome_professor = obter_nome_professor()  # Obter o nome do professor
-        criar_turma(planilha, nome_turma, nome_professor)
+            if nome_turma == "s":
+                break
+        
+            nome_professor = obter_nome_professor()  # Obter o nome do professor
+            criar_turma(planilha, nome_turma, nome_professor)
 
     elif escolha == '2':
         print("Turmas disponíveis:")
@@ -172,7 +175,7 @@ while True:
     
     elif escolha == '3':
         while True:
-            nome_turma = input("Digite o nome da turma em que deseja adicionar os alunos (ou 's' para sair): ")
+            nome_turma = input("Digite o nome da turma em que deseja adicionar os alunos (ou 's' para sair): ").lower()
 
             if nome_turma.lower() == 's':
                 break
@@ -193,18 +196,39 @@ while True:
 
                     if continuar == 'n':
                         break
-
     
     elif escolha == '4':
-        nome_turma = input("Digite o nome da turma: ")
-        nome_grupos = input("Digite os nomes dos grupos separados por vírgula: ")
-        criar_grupo(planilha, nome_turma, nome_grupos)
+        while True:
+            nome_turma = input("Digite o nome da turma (ou 's' para sair): ")
+            
+            if nome_turma == 's':
+                break
+            
+            nome_grupos = input("Digite os nomes dos grupos separados por vírgula: ")
+            criar_grupo(planilha, nome_turma, nome_grupos)
 
     elif escolha == '5':
-        nome_turma = input("Digite o nome da turma: ")
-        nome_grupo = input("Digite o nome do grupo: ")
-        adicionar_aluno_grupo(planilha, nome_turma, nome_grupo)
+        while True:
+            nome_turma = input("Digite o nome da turma (ou 's' para sair): ")
+            
+            if nome_turma == 's':
+                break
+            
+            nome_grupo = input("Digite o nome do grupo: ")
+            adicionar_aluno_grupo(planilha, nome_turma, nome_grupo)
+
     elif escolha == '6':
+        while True:
+            nome_turma = input("Digite o nome da turma em que deseja adicionar o grupo (ou 's' para sair): ").lower()
+            if nome_turma.lower() == 's':
+                break
+            if nome_turma not in planilha.sheetnames:
+                print(f"A turma '{nome_turma}' não existe. Tente novamente.")
+            else:
+                nome_grupo = input("Digite o nome do grupo: ")
+                criar_grupo(planilha, nome_turma, nome_grupo)
+
+    elif escolha == '7':
         planilha.save(nome_arquivo)
         print(f"Planilha salva como '{nome_arquivo}'.")
         break
