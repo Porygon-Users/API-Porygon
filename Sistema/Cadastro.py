@@ -16,13 +16,17 @@ def validar_cpf(cpf):
     else:
         return False
 
+# Formata o CPF com os "-" nos dois últimos dígitos
+def formatar_cpf(cpf):
+    return f"{cpf[:9]}-{cpf[9:]}"
+
 # Verifica se já existe um banco de dados, caso não, ele cria
 arquivo_excel = "Dados Cadastrais.xlsx"
 if not os.path.exists(arquivo_excel):
     workbook = Workbook()
-    workbook.remove(workbook["Sheet"])  #Remove a aba "Sheet" padrão
-    workbook.create_sheet("Alunos")  #Cria a aba para alunos
-    workbook.create_sheet("Professores")  #Cria a aba para professores
+    workbook.remove(workbook["Sheet"])  # Remove a aba "Sheet" padrão
+    workbook.create_sheet("Alunos")  # Cria a aba para alunos
+    workbook.create_sheet("Professores")  # Cria a aba para professores
     sheet_alunos = workbook["Alunos"]
     sheet_alunos.append(["Nome", "CPF", "Email", "Login", "Senha"])
     sheet_professores = workbook["Professores"]
@@ -44,10 +48,11 @@ while True:
     
     nome = input("\nDigite o nome: ")
     
-    #Validação de CPF
+    # Validação de CPF
     while True:
         cpf = input("Digite o CPF: ")
         if validar_cpf(cpf):
+            cpf = formatar_cpf(cpf)  # Formata o CPF com os "-"
             break
         else:
             print("\nPor favor, tente novamente.")
@@ -83,4 +88,5 @@ while True:
     
     if resposta == 'N':
         break
+
 print("\n")

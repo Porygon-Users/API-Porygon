@@ -1,101 +1,93 @@
 import openpyxl
+from openpyxl.styles import Alignment, Font
 
 # Função para verificar se um professor já está alocado em alguma turma
-def professor_em_turma(planilha, professor_chave):
+def professor_em_turma(planilha, professor_nome):
     abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
-    
+
     for turma in abas_turmas:
         aba_turma = planilha[turma]
-        for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=3):
+        for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=4, max_col=5):
             nome = row[0].value
             cpf = row[1].value
-            professor_turma_chave = (nome, cpf)
-            
-            if professor_turma_chave == professor_chave:
+            if nome == professor_nome:
                 return True
-    
+
     return False
 
-# Função para copiar os professores da aba "Professores" para uma turma específica
-def adicionar_professores_a_turma(planilha, turma_destino, professores_adicionados, nomes_professores):
-    aba_professores = planilha['Professores']
+# Função para verificar se um professor já está em alguma turma
+def professor_em_alguma_turma(planilha, professor_nome):
+    abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
+
+    for turma in abas_turmas:
+        if professor_em_turma(planilha, professor_nome):
+            return True
+
+    return False
+
+# Função para adicionar um professor a uma turma específica
+def adicionar_professor_a_turma(planilha, turma_destino, professor_nome, professor_cpf):
     aba_turma = planilha[turma_destino]
 
-    for row in aba_professores.iter_rows(min_row=2, max_row=aba_professores.max_row, min_col=1, max_col=3):
-        nome = row[0].value
-        cpf = row[1].value
-        email = row[2].value
-        professor_chave = (nome, cpf)
+    # Encontrar a primeira linha vazia após os cabeçalhos "Professores" e "CPF - Prof"
+    primeira_linha_vazia = 2  # Começando na linha 2 para evitar os cabeçalhos
 
-        # Verificar se o professor já está alocado em alguma turma
-        if professor_em_turma(planilha, professor_chave):
-            continue
+    for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=4, max_col=5):
+        if all(cell.value is None for cell in row):
+            break
+        primeira_linha_vazia += 1
 
-        # Verificar se o professor já foi adicionado a alguma turma
-        if nome in nomes_professores:
-            # Adicionar o nome do professor à coluna D (quarta coluna) e o CPF à coluna E (quinta coluna) da turma
-            aba_turma.append([None, None, None, nome, cpf])
-            professores_adicionados.add(nome)
-
+    # Adicionar o professor à turma com nome e CPF
+    aba_turma.cell(row=primeira_linha_vazia, column=4).value = professor_nome
+    aba_turma.cell(row=primeira_linha_vazia, column=5).value = professor_cpf
+    print(f"Professor {professor_nome} adicionado à {turma_destino} com sucesso.")
     planilha.save('Dados Cadastrais.xlsx')
 
 # Abrir a planilha
 planilha = openpyxl.load_workbook('Dados Cadastrais.xlsx')
 
-# Conjunto para manter o controle dos nomes de professores já adicionados
-professores_adicionados = set()
-
 while True:
     print("\nOpções:")
-    print("1. Adicionar professores às turmas")
-    print("2. Ver professores disponíveis e não alocados")
-    print("3. Sair do programa")
-    
-    escolha = input("Escolha a opção (1, 2 ou 3): ")
-    
+    print("\n1. Adicionar professor a uma turma")
+    print("2. Mostrar professores disponíveis e não alocados")
+    print("3. Sair do programa", "\n")
+
+    escolha = input("Escolha uma das opções: ")
+
     if escolha == '1':
         # Listar as abas de turma disponíveis
         abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
-        
+
         if not abas_turmas:
             print("Não foram encontradas abas de turma na planilha.")
         else:
-            print("Turmas existentes:")
-            for i, turma in enumerate(abas_turmas, start=1):
-                print(f"{i}. {turma}")
+            print("\nTurmas existentes:", "\n")
+            for turma in abas_turmas:
+                print(turma, "\n")
 
-            # Solicitar ao usuário qual turma deseja adicionar os professores
-            turma_desejada = input("Em qual turma deseja adicionar os professores: ")
+            # Solicitar ao usuário em qual turma deseja adicionar o professor
+            turma_desejada = input("Em qual turma deseja adicionar o professor: ")
             if turma_desejada in abas_turmas:
-                nomes_professores = input("Digite os nomes dos professores (separados por vírgula): ")
-                nomes_professores = [nome.strip() for nome in nomes_professores.split(',')]
-                adicionar_professores_a_turma(planilha, turma_desejada, professores_adicionados, nomes_professores)
-                print(f"Professores adicionados com sucesso à {turma_desejada}")
+                aba_turma = planilha[turma_desejada]
+                professor_nome = input("Digite o nome do professor: ")
+                professor_cpf = input("Digite o CPF do professor: ")
+
+                adicionar_professor_a_turma(planilha, turma_desejada, professor_nome, professor_cpf)
             else:
-                print("Turma não encontrada.")
+                print("\nTurma não encontrada.")
     elif escolha == '2':
-        professores_nao_alocados = set()
-        
-        # Verificar professores na aba "Professores" que não foram alocados a nenhuma turma
+        print("\nProfessores disponíveis e não alocados:")
         aba_professores = planilha['Professores']
-        for row in aba_professores.iter_rows(min_row=2, max_row=aba_professores.max_row, min_col=1, max_col=3):
+
+        for row in aba_professores.iter_rows(min_row=2, max_row=aba_professores.max_row, min_col=1, max_col=2):
             nome = row[0].value
             cpf = row[1].value
-            email = row[2].value
-            professor_chave = (nome, cpf)
-            
-            if not professor_em_turma(planilha, professor_chave):
-                professores_nao_alocados.add(nome)
-                
-        if professores_nao_alocados:
-            print("Professores disponíveis para alocação:")
-            for nome in professores_nao_alocados:
-                print(nome)
-        else:
-            print("Não há professores disponíveis para alocação.")
+
+            if not professor_em_alguma_turma(planilha, nome):
+                print(f"Nome: {nome}, CPF: {cpf}")
     elif escolha == '3':
         break
     else:
-        print("Opção inválida. Escolha 1 para adicionar professores, 2 para verificar professores disponíveis ou 3 para sair.")
+        print("\nOpção inválida. Escolha 1 para adicionar um professor a uma turma, 2 para mostrar professores disponíveis ou 3 para sair.")
 
-print("Programa encerrado.")
+print("\nPrograma encerrado.", "\n")
