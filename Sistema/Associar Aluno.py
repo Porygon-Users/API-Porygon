@@ -76,7 +76,7 @@ while True:
         abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
         
         if not abas_turmas:
-            print("Não foram encontradas abas de turma na planilha.")
+            print("\nNão foram encontradas abas de turma na planilha.", "\n")
         else:
             print("\nTurmas existentes:", "\n")
             for turma in abas_turmas:

@@ -38,10 +38,10 @@ instituições tradicionais já conceituadas no mercado. O desafio será de apoi
 |:------------:|:----------:|:-----:|:--------:|:------:|
 | User Story 1 | Cadastro de Alunos e Professores | 3 | Sprint 1 | ✔️ |
 | User Story 2 | Criação de Turmas e Associação de Alunos | 2 | Sprint 1 | ✔️ | 
-| User Story 7 | Configuração de Datas do Semestre | 1 | Sprint 1 | ❌ |
+| User Story 7 | Configuração de Datas do Semestre | 1 | Sprint 1 | ✔️ |
 | User Story 3 | Visualização de Turmas pelo Aluno | 2 | Sprint 2 | ❌ |
-| User Story 4 | Fechamento de Turmas pelo Administrador | 4 | Sprint 2 | ❌ | 
-| User Story 5 | Criação de Grupos pelos Administradores | 5 | Sprint 2 | ✔️ | 
+| User Story 4 | Fechamento de Turmas pelo Administrador | 3 | Sprint 2 | ❌ | 
+| User Story 5 | Criação de Grupos pelos Administradores | 4 | Sprint 2 | ✔️ | 
 | User Story 6 | Visualização de Grupos e Membros pelos Alunos | 1 | Sprint 2 | ❌ | 
 | User Story 12 | Criação de Ciclos de Entrega pelo Administrador | 5 | Sprint 3 | ❌ | 
 | User Story 13 | Associação de Tarefas e Datas de Entrega aos Ciclos pelo Professor | 4 |Sprint 3 | ❌ | 
@@ -49,7 +49,7 @@ instituições tradicionais já conceituadas no mercado. O desafio será de apoi
 | User Story 15 | Lançamento de Notas e Feedbacks pelos Professores | 3 |Sprint 3 | ❌ | 
 | User Story 16 | Visualização de Notas de Ciclos Anteriores pelos Alunos | 2 |Sprint 3 | ❌ | 
 | User Story 8 | Atualização de Informações dos Alunos pelo Administrador | 4 | Sprint 4 | ❌ | 
-| User Story 9 | Visualização de Perfil e Informações Pessoais pelo Aluno | 2 | Sprint 4 | ✔️ | 
+| User Story 9 | Visualização de Perfil e Informações Pessoais pelo Aluno | 2 | Sprint 4 | ❌ | 
 | User Story 10 | Importação de Dados de Alunos em Massa pelo Administrador | 6 | Sprint 4 | ❌ | 
 | User Story 11 | Exportação de Dados de Alunos para Relatórios pelo Administrador | 5 | Sprint 4 | ❌ | 
 | User Story 17 | Geração de Relatórios Consolidados de Desempenho dos Alunos pelo Administrador | 2 | Sprint 4 | ❌ | 
