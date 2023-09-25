@@ -73,6 +73,8 @@ instituições tradicionais já conceituadas no mercado. O desafio será de apoi
 <img align="center" alt="Trello" height="40" width="40" src="https://www.onlinemarketingtools.pro/wp-content/uploads/2018/11/Trello-logo.png" />
 <img align="center" alt="Python" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/5f1f1dc0-a138-4292-80ae-8a153184efb5" />
 <img align="center" alt="Teams" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/e6452644-c354-4636-a97c-12b5df1ea47e" />
+<img align="center" alt="Excel" height="35" width="50" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/20af340e-2d3c-475c-9924-3dc4a1c9f83b" />
+
 
 ## Wireframe
 <a name="Wireframe"></a>
