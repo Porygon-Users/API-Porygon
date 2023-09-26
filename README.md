@@ -36,33 +36,33 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <a name="Backlog do Produto"></a>
 | User Story   | Descrição  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
-| User Story 1 | Cadastro de Alunos e Professores | 3 | Sprint 1 | ✔️ |
-| User Story 2 | Criação de Turmas e Associação de Alunos | 2 | Sprint 1 | ✔️ | 
-| User Story 7 | Configuração de Datas do Semestre | 1 | Sprint 1 | ✔️ |
-| User Story 3 | Visualização de Turmas pelo Aluno | 2 | Sprint 2 | ❌ |
-| User Story 4 | Fechamento de Turmas pelo Administrador | 3 | Sprint 2 | ❌ | 
-| User Story 5 | Criação de Grupos pelos Administradores | 4 | Sprint 2 | ✔️ | 
-| User Story 6 | Visualização de Grupos e Membros pelos Alunos | 1 | Sprint 2 | ❌ | 
-| User Story 12 | Criação de Ciclos de Entrega pelo Administrador | 5 | Sprint 3 | ❌ | 
-| User Story 13 | Associação de Tarefas e Datas de Entrega aos Ciclos pelo Professor | 4 |Sprint 3 | ❌ | 
-| User Story 14 | Visualização de Ciclos de Entregas e Datas pelos Alunos | 1 |Sprint 3 | ❌ | 
-| User Story 15 | Lançamento de Notas e Feedbacks pelos Professores | 3 |Sprint 3 | ❌ | 
-| User Story 16 | Visualização de Notas de Ciclos Anteriores pelos Alunos | 2 |Sprint 3 | ❌ | 
-| User Story 8 | Atualização de Informações dos Alunos pelo Administrador | 4 | Sprint 4 | ❌ | 
-| User Story 9 | Visualização de Perfil e Informações Pessoais pelo Aluno | 2 | Sprint 4 | ❌ | 
-| User Story 10 | Importação de Dados de Alunos em Massa pelo Administrador | 6 | Sprint 4 | ❌ | 
-| User Story 11 | Exportação de Dados de Alunos para Relatórios pelo Administrador | 5 | Sprint 4 | ❌ | 
-| User Story 17 | Geração de Relatórios Consolidados de Desempenho dos Alunos pelo Administrador | 2 | Sprint 4 | ❌ | 
-| User Story 18 | Visualização de Progresso ao Longo do Curso pelo Aluno | 1 | Sprint 4 | ❌ | 
+| Cadastro de Alunos e Professores | É fundamental ter um método de autenticação e identificação de usuários para garantir a segurança e a individualização das interações no sistema.| 3 | Sprint 1 | ✔️ |
+| Criação de Turmas e Associação de Alunos | A criação de turmas é fundamental para distribuir alunos em salas específicas do curso e garantir que as aulas sejam bem organizadas e controladas. | 2 | Sprint 1 | ✔️ | 
+| Configuração de Datas do Semestre | O calendário acadêmico é essencial para o planejamento de aulas, provas e outras atividades educacionais, garantindo a organização e eficiência no funcionamento da instituição. | 1 | Sprint 1 | ✔️ |
+| Visualização de Turmas pelo Aluno | Os alunos precisam dessa funcionalidade para acompanhar em qual turma estão matriculados no momento. Isso é importante para sua própria organização acadêmica. | 2 | Sprint 2 | 🚧 |
+| Fechamento de Turmas pelo Administrador | O fechamento de turmas é importante para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso/semestre. Isso ajuda na organização administrativa e evita confusões futuras. | 3 | Sprint 2 | 🚧 | 
+| Criação de Grupos pelos Administradores | A criação de grupos dentro de uma turma é essencial para facilitar a comunicação e o trabalho entre os alunos que participam do mesmo desafio. Isso promove a interação e o aprendizado colaborativo. | 4 | Sprint 2 | ✔️ | 
+| Visualização de Grupos e Membros pelos Alunos | Os alunos precisam saber com quem estão colaborando em atividades e projetos dentro da turma para facilitar a comunicação e o trabalho em equipe. | 1 | Sprint 2 | 🚧 | 
+| Criação de Ciclos de Entrega pelo Administrador | A criação de ciclos de entrega é fundamental para a definição de datas-chave e a divisão das avaliações ao longo do período letivo. | 5 | Sprint 3 | 🚧 | 
+| Associação de Tarefas e Datas de Entrega aos Ciclos pelo Professor | A associação de tarefas e datas de entrega aos ciclos permite que os professores planejem as atividades acadêmicas de forma eficaz. | 4 |Sprint 3 | 🚧 | 
+| Visualização de Ciclos de Entregas e Datas pelos Alunos | A associação de tarefas e datas de entrega aos ciclos permite que os professores planejem as atividades acadêmicas de forma eficaz. | 1 |Sprint 3 | 🚧 | 
+| Lançamento de Notas e Feedbacks pelos Professores | O lançamento de notas e feedbacks é essencial para o processo de aprendizado, permitindo que os alunos entendam seus pontos fortes e áreas a melhorar. | 3 |Sprint 3 | 🚧 | 
+| Visualização de Notas de Ciclos Anteriores pelos Alunos | A visualização de notas de ciclos anteriores permite que os alunos avaliem seu progresso acadêmico e estabeleçam metas de melhoria. | 2 |Sprint 3 | 🚧 | 
+| Atualização de Informações dos Alunos pelo Administrador | Apresentar um histórico completo de notas e feedbacks de avaliações anteriores. | 4 | Sprint 4 | 🚧 | 
+| Visualização de Perfil e Informações Pessoais pelo Aluno | Visualização de Perfil e Informações Pessoais pelo Aluno | 2 | Sprint 4 | 🚧 | 
+| Importação de Dados de Alunos em Massa pelo Administrador | A importação em massa de dados economiza tempo e reduz erros manuais, garantindo registros precisos. | 6 | Sprint 4 | 🚧 | 
+| Exportação de Dados de Alunos para Relatórios pelo Administrador | A exportação de dados é fundamental para análises e relatórios precisos sobre o desempenho dos alunos. | 5 | Sprint 4 | 🚧 | 
+| Geração de Relatórios Consolidados de Desempenho dos Alunos pelo Administrador | A geração de relatórios consolidados fornece insights valiosos sobre o desempenho dos alunos em nível institucional. | 2 | Sprint 4 | 🚧 | 
+| Visualização de Progresso ao Longo do Curso pelo Aluno | A visualização do progresso motiva os alunos, ajuda a identificar áreas que precisam de mais atenção e fornece uma visão geral de seu desempenho acadêmico. | 1 | Sprint 4 | 🚧 | 
 
 ## Cronograma
 <a name="Cronograma"></a>
 | SPRINTS| DATA INÍCIO | DATA TÉRMINO | STATUS |
 | :------:| :----------: | :-----------: | :-----: |
 | Sprint 1 |  04/09/23 | 24/09/23 | ✔️ |
-| Sprint 2 | 25/09/23 | 15/10/23 | ❌ |
-| Sprint 3 | 16/10/23 | 05/11/23 | ❌ |
-| Sprint 4 | 06/11/23 | 26/11/23 | ❌ |
+| Sprint 2 | 25/09/23 | 15/10/23 | 🚧 |
+| Sprint 3 | 16/10/23 | 05/11/23 | 🚧 |
+| Sprint 4 | 06/11/23 | 26/11/23 | 🚧 |
 
 
 ## Ferramentas Utilizadas
