@@ -26,7 +26,7 @@
 ## Desafio Proposto
 <a name="Desafio Proposto"></a>
 > A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
-instituições tradicionais já conceituadas no mercado. O desafio será de apoiar a instituição a levantar, especificar e desenvolver uma solução computacional que viabilize a aplicação desta técnica diferenciada.
+instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos de entregas que por sua vez entregam os scores parciais de seus alunos para no final computar o FEE (Fator de Ensino Evolutivo). O desafio será de apoiar a instituição e desenvolver uma sistema de informação que viabilize a aplicação desta técnica diferenciada.
 
 ## Objetivo
 <a name="Objetivo"></a>
