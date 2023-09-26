@@ -69,7 +69,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <a name="Ferramentas Utilizadas"></a>
 <img align="center" alt="Canvas" height="40" width="40" src="https://carmentune.com/wp-content/uploads/Canva-logo-1024x1024.png" />
 <img align="center" alt="Github" height="40" width="40" src="https://pngimg.com/uploads/github/github_PNG51.png" />
-<img align="center" alt="Git" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/5b64e5ee-7e4c-4488-8ad9-7ed1933f4ce6" />
+<img align="center" alt="Git" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/f47b4c36-4dab-4ab5-862d-23ececba1436" />
 <img align="center" alt="Vscode" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
 <img align="center" alt="Trello" height="40" width="40" src="https://www.onlinemarketingtools.pro/wp-content/uploads/2018/11/Trello-logo.png" />
 <img align="center" alt="Python" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/5f1f1dc0-a138-4292-80ae-8a153184efb5" />
