@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 def adicionar_data_e_ciclos(planilha, turma_destino):
     aba_turma = planilha[turma_destino]
 
-    data_inicio = datetime.strptime(input("Digite a data de início do curso (DD/MM/AAAA): "), "%d/%m/%Y")
+    data_inicio = datetime.strptime(input("\nDigite a data de início do curso (DD/MM/AAAA): "), "%d/%m/%Y")
     data_fim = datetime.strptime(input("Digite a data de término do curso (DD/MM/AAAA): "), "%d/%m/%Y")
 
     # Adicionar data de início e término do curso na planilha
@@ -14,7 +14,7 @@ def adicionar_data_e_ciclos(planilha, turma_destino):
     aba_turma.cell(row=2, column=7).value = data_inicio.strftime('%d/%m/%Y')
     aba_turma.cell(row=2, column=8).value = data_fim.strftime('%d/%m/%Y')
 
-    qtd_ciclos = int(input("Quantos ciclos você deseja: "))
+    qtd_ciclos = int(input("\nQuantos ciclos você deseja: "))
 
     # Ajuste para garantir que todos os ciclos, exceto o último, tenham a mesma quantidade de dias
     duracao_ciclo = (data_fim - data_inicio) / qtd_ciclos
@@ -47,15 +47,19 @@ def adicionar_data_e_ciclos(planilha, turma_destino):
         dias_ciclo = (ciclo_fim - ciclo_inicio).days + 1
         aba_turma.cell(row=i + 2, column=11).value = dias_ciclo
 
+        #Exibir a quantidade de dias do ciclo
+        print(f"\nCiclo {i + 1} terá {dias_ciclo} dias.")
+
     planilha.save('Dados Cadastrais.xlsx')
-    print("Data de início, fim do curso e ciclos adicionados com sucesso.")
+    print("\n----Data de início, fim do curso e ciclos adicionados com sucesso!!----")
+    
 
 # Abrir a planilha
 planilha = openpyxl.load_workbook('Dados Cadastrais.xlsx')
 
 while True:
     print("\nOpções:")
-    print("\n1. Adicionar data de início do curso e criar ciclos")
+    print("\n1. Adicionar data de início do curso e criar ciclos")  
     print("2. Sair do programa", "\n")
 
     escolha = input("Escolha uma das opções: ")
@@ -64,18 +68,18 @@ while True:
         abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
 
         if not abas_turmas:
-            print("\nNão foram encontradas abas de turma na planilha.")
+            print("\nNão foram encontradas abas de turma na planilha")
         else:
             print("\nTurmas existentes:", "\n")
             for i, turma in enumerate(abas_turmas, start=1):
                 print(f"{i}. {turma}")
 
-            num_turma = int(input("Escolha o número da turma: "))
+            num_turma = int(input("\nEscolha o número da turma: "))
             if 1 <= num_turma <= len(abas_turmas):
                 turma_desejada = abas_turmas[num_turma - 1]
                 adicionar_data_e_ciclos(planilha, turma_desejada)
             else:
-                print("Número de turma inválido.")
+                print("\nNúmero de turma inválido.")
 
     elif escolha == '2':
         break
