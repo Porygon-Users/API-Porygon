@@ -32,6 +32,10 @@
 > A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
 instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos de entregas que por sua vez entregam os scores parciais de seus alunos para no final computar o FEE (Fator de Ensino Evolutivo). O desafio será de apoiar a instituição e desenvolver uma sistema de informação que viabilize a aplicação desta técnica diferenciada.
 
+## Objetivo
+<a name="Objetivo"></a>
+> Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
+
 ## Requisitos Funcionais
 <a name="Requisitos Funcionais"></a>
 > • O SI deve possuir um controle de Turmas;<br />
@@ -44,23 +48,18 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 • O SI deve permitir a exportação de dados consolidados, computados e métricas inferidas;<br />
 • O SI deve prover visibilidades objetivas e diretas que possibilitem o acompanhamento dos cursos providos pela PBLTeX.<br />
 
-## Objetivo
-<a name="Objetivo"></a>
-> Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
-
 ## Backlog do Produto
 <a name="Backlog do Produto"></a>
 | User Story  | Descrição  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
 | Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
 | Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
-| Como administrador, quero definir o tempo total de curso. | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
+| Como administrador, quero definir o tempo total de curso e criar ciclos de entrega | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
 | Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
 | Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | 🚧 | 
 | Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 3 | Sprint 3 | 🚧 | 
-| Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 | 
-| Como professor, quero poder criar ciclos de entregas para fazer a avaliação dos alunos. | Para estruturar o processo de avaliação, permitindo uma abordagem organizada e eficiente. | 4 |Sprint 3 | 🚧 | 
+| Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 |  
 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | 🚧 |  
 | Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe | 1 | Sprint 4 | 🚧 | 
 
