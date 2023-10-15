@@ -1,21 +1,24 @@
 import openpyxl
+from openpyxl.styles import Font, Alignment
+import os
 from openpyxl.utils import get_column_letter
-from openpyxl.styles import Alignment, Font
 
-# Nome do arquivo Excel
-arquivo_excel = "Dados Cadastrais.xlsx"
+# Obtenha o diretório atual em que o script Python está sendo executado
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
-# Carregar o arquivo Excel (se existir) ou criar um novo
-try:
-    book = openpyxl.load_workbook(arquivo_excel)
-except FileNotFoundError:
+# Construa o caminho completo para o arquivo Excel no diretório 'database'
+caminho_arquivo_excel = os.path.join(diretorio_atual, '..', 'database', 'infodados.xlsx')
+
+# Abrir o arquivo Excel existente ou criar um novo
+if os.path.exists(caminho_arquivo_excel):
+    book = openpyxl.load_workbook(caminho_arquivo_excel)
+else:
     book = openpyxl.Workbook()
-    book.save(arquivo_excel)
 
 # Função para criar uma nova aba de turma
 def criar_nova_turma(book, numero_turma):
     nova_aba = book.create_sheet(f"Turma {numero_turma}")
-    cabecalhos = ["Alunos", "CPF", "Email", "Professores", "CPF - Prof", "Grupos", "Inicio de Semestre", "Fim de Semestre"]
+    cabecalhos = ["Alunos", "CPF", "Email", "Professores", "CPF - Prof", "Grupos", "Inicio do Curso", "Fim do Curso"]
     nova_aba.append(cabecalhos)
 
     # Ajustar a largura da coluna e centralizar os cabeçalhos
@@ -25,9 +28,7 @@ def criar_nova_turma(book, numero_turma):
         cell.alignment = Alignment(horizontal='center')
         cell.font = Font(bold=True)
         cell.value = header
-        nova_aba.column_dimensions[coluna_letra].width = 35
-
-    book.save(arquivo_excel)
+        nova_aba.column_dimensions[coluna_letra].width = 30
 
 # Função para exibir o número de turmas
 def mostrar_numero_de_turmas(book):
@@ -48,9 +49,9 @@ def excluir_turmas(book, turmas_a_excluir):
             print(f"\nTurma {turma_nome} excluída com sucesso.")
         else:
             print(f"\nA turma {turma_nome} não foi encontrada.")
-    book.save(arquivo_excel)
+    book.save(caminho_arquivo_excel)
 
-    # Loop principal
+# Loop principal
 while True:
     print("\nEscolha uma opção:")
     print("\n1 - Criar nova turma")
@@ -78,3 +79,6 @@ while True:
         print("\nOpção inválida.", "\n")
 
 print("\nEncerrando o programa.", "\n")
+
+# Salve as alterações no arquivo Excel
+book.save(caminho_arquivo_excel)

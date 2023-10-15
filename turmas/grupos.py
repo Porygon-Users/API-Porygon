@@ -1,4 +1,19 @@
 import openpyxl
+from openpyxl.styles import Font, Alignment
+import os
+from openpyxl.utils import get_column_letter
+
+# Obtenha o diretório atual em que o script Python está sendo executado
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+
+# Construa o caminho completo para o arquivo Excel no diretório 'database'
+caminho_arquivo_excel = os.path.join(diretorio_atual, '..', 'database', 'infodados.xlsx')
+
+# Abrir o arquivo Excel existente ou criar um novo
+if os.path.exists(caminho_arquivo_excel):
+    book = openpyxl.load_workbook(caminho_arquivo_excel)
+else:
+    book = openpyxl.Workbook()
 
 # Função para criar grupos em uma turma
 def criar_grupos(planilha, turma_nome, num_alunos_por_grupo):
@@ -53,7 +68,6 @@ def criar_grupos(planilha, turma_nome, num_alunos_por_grupo):
     wb.save(planilha)
     print(f"\nForam criados {len(grupos)} grupos com {num_alunos_por_grupo} alunos cada{' e um grupo final com ' + str(alunos_restantes) + ' alunos' if alunos_restantes > 0 else ''} na '{turma_nome}'.")
 
-
 # Função para listar as turmas existentes
 def listar_turmas(planilha):
     wb = openpyxl.load_workbook(planilha)
@@ -83,8 +97,6 @@ def contar_alunos(planilha, turma_nome):
 
 # Função principal do programa
 def main():
-    planilha = 'Dados Cadastrais.xlsx'
-    
     while True:
         print("\nOpções:")
         print("\n1. Criar grupos")
@@ -95,16 +107,16 @@ def main():
         
         if escolha == '1':
             turma = input('\nDigite o nome da turma: ')
-            alunos_na_turma = contar_alunos(planilha, turma)  # Mostrar a quantidade de alunos na turma
+            alunos_na_turma = contar_alunos(caminho_arquivo_excel, turma)  # Mostrar a quantidade de alunos na turma
             if alunos_na_turma is not None:
                 if alunos_na_turma > 0:
                     print(f"\nA turma '{turma}' possui {alunos_na_turma} alunos.")
                     alunos_por_grupo = int(input("\nDigite o número de alunos por grupo: "))
-                    criar_grupos(planilha, turma, alunos_por_grupo)
+                    criar_grupos(caminho_arquivo_excel, turma, alunos_por_grupo)
         elif escolha == '2':
-            listar_turmas(planilha)
+            listar_turmas(caminho_arquivo_excel)
         elif escolha == '3':
-            print("\nSaindo do programa.", "\n")
+            print("\nSaindo do programa", "\n")
             break
         else:
             print("\nOpção inválida. Tente novamente.", "\n")
