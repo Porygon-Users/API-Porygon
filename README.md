@@ -1,14 +1,18 @@
+<br id="topo">
+
 # <p align = "center"> API - 1° Semestre - Banco de Dados 2023 
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/8c66b2a8-7371-4ede-b323-05caf21f7914" alt="Capa" style="width:700px;height:400px;"></p>
 
 <p align = "center">
 <a href="#Integrantes">Integrantes</a> •
 <a href="#Desafio Proposto">Desafio Proposto</a> •
+<a href="#Requisitos Funcionais">Requisitos Funcionais</a> •
 <a href="#Objetivo">Objetivo</a> •
 <a href="#Backlog do Produto">Backlog do Produto</a> •
 <a href="#Cronograma">Cronograma</a> •
 <a href="#Ferramentas Utilizadas">Ferramentas Utilizadas</a> •
-<a href="#Wireframe">Wireframe</a> 
+<a href="#Wireframe">Wireframe</a> •
+<a href="#Wireframe V2">Wireframe V2</a> 
   
 ## Integrantes
 <a name="Integrantes"></a>
@@ -28,37 +32,43 @@
 > A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
 instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos de entregas que por sua vez entregam os scores parciais de seus alunos para no final computar o FEE (Fator de Ensino Evolutivo). O desafio será de apoiar a instituição e desenvolver uma sistema de informação que viabilize a aplicação desta técnica diferenciada.
 
+## Requisitos Funcionais
+<a name="Requisitos Funcionais"></a>
+> • O SI deve possuir um controle de Turmas;<br />
+• O SI deve possuir um controle de Grupos de Alunos;<br />
+• O SI deve permitir um controle de Alunos;<br />
+• O SI deve permitir a carga de Alunos;<br />
+• O SI deve permitir um controle dos Ciclos de Entrega;<br />
+• O SI deve permitir a carga de Scores parciais relacionados ao Ciclo de Entrega;<br />
+• O SI deve permitir a Configuração de parâmetros globai;s<br />
+• O SI deve permitir a exportação de dados consolidados, computados e métricas inferidas;<br />
+• O SI deve prover visibilidades objetivas e diretas que possibilitem o acompanhamento dos cursos providos pela PBLTeX.<br />
+
 ## Objetivo
 <a name="Objetivo"></a>
 > Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
 
 ## Backlog do Produto
 <a name="Backlog do Produto"></a>
-| User Story   | Descrição  | Prioridade | Sprint  | Status |
+| User Story  | Descrição  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
-| Cadastro de Alunos e Professores | É fundamental ter um método de autenticação e identificação de usuários para garantir a segurança e a individualização das interações no sistema.| 3 | Sprint 1 | ✔️ |
-| Criação de Turmas e Associação de Alunos | A criação de turmas é fundamental para distribuir alunos em salas específicas do curso e garantir que as aulas sejam bem organizadas e controladas. | 2 | Sprint 1 | ✔️ | 
-| Configuração de Datas do Semestre | O calendário acadêmico é essencial para o planejamento de aulas, provas e outras atividades educacionais, garantindo a organização e eficiência no funcionamento da instituição. | 1 | Sprint 1 | ✔️ |
-| Visualização de Turmas pelo Aluno | Os alunos precisam dessa funcionalidade para acompanhar em qual turma estão matriculados no momento. Isso é importante para sua própria organização acadêmica. | 1 | Sprint 2 | 🚧 |
-| Fechamento de Turmas pelo Administrador | O fechamento de turmas é importante para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso/semestre. Isso ajuda na organização administrativa e evita confusões futuras. | 2 | Sprint 2 | 🚧 | 
-| Criação de Grupos pelos Administradores | A criação de grupos dentro de uma turma é essencial para facilitar a comunicação e o trabalho entre os alunos que participam do mesmo desafio. Isso promove a interação e o aprendizado colaborativo. | 3 | Sprint 2 | ✔️ |  
-| Criação de Ciclos de Entrega pelo Administrador | A criação de ciclos de entrega é fundamental para a definição de datas-chave e a divisão das avaliações ao longo do período letivo. | 5 | Sprint 3 | 🚧 | 
-| Associação de Tarefas e Datas de Entrega aos Ciclos pelo Professor | A associação de tarefas e datas de entrega aos ciclos permite que os professores planejem as atividades acadêmicas de forma eficaz. | 4 |Sprint 3 | 🚧 | 
-| Visualização de Ciclos de Entregas e Datas pelos Alunos | A associação de tarefas e datas de entrega aos ciclos permite que os professores planejem as atividades acadêmicas de forma eficaz. | 1 |Sprint 3 | 🚧 | 
-| Lançamento de Notas e Feedbacks pelos Professores | O lançamento de notas e feedbacks é essencial para o processo de aprendizado, permitindo que os alunos entendam seus pontos fortes e áreas a melhorar. | 3 |Sprint 3 | 🚧 | 
-| Visualização de Notas de Ciclos Anteriores pelos Alunos | A visualização de notas de ciclos anteriores permite que os alunos avaliem seu progresso acadêmico e estabeleçam metas de melhoria. | 2 |Sprint 3 | 🚧 | 
-| Atualização de Informações dos Alunos pelo Administrador | Apresentar um histórico completo de notas e feedbacks de avaliações anteriores. | 4 | Sprint 4 | 🚧 | 
-| Visualização de Perfil e Informações Pessoais pelo Aluno | Visualização de Perfil e Informações Pessoais pelo Aluno | 2 | Sprint 4 | 🚧 | 
-| Importação de Dados de Alunos em Massa pelo Administrador | A importação em massa de dados economiza tempo e reduz erros manuais, garantindo registros precisos. | 6 | Sprint 4 | 🚧 | 
-| Exportação de Dados de Alunos para Relatórios pelo Administrador | A exportação de dados é fundamental para análises e relatórios precisos sobre o desempenho dos alunos. | 5 | Sprint 4 | 🚧 | 
-| Geração de Relatórios Consolidados de Desempenho dos Alunos pelo Administrador | A geração de relatórios consolidados fornece insights valiosos sobre o desempenho dos alunos em nível institucional. | 2 | Sprint 4 | 🚧 | 
-| Visualização de Progresso ao Longo do Curso pelo Aluno | A visualização do progresso motiva os alunos, ajuda a identificar áreas que precisam de mais atenção e fornece uma visão geral de seu desempenho acadêmico. | 1 | Sprint 4 | 🚧 | 
+| Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
+| Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
+| Como administrador, quero definir o tempo total de curso. | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
+| Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
+| Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | 🚧 | 
+| Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
+| Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 3 | Sprint 3 | 🚧 | 
+| Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 | 
+| Como professor, quero poder criar ciclos de entregas para fazer a avaliação dos alunos. | Para estruturar o processo de avaliação, permitindo uma abordagem organizada e eficiente. | 4 |Sprint 3 | 🚧 | 
+| Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | 🚧 |  
+| Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe | 1 | Sprint 4 | 🚧 | 
 
 ## Cronograma
 <a name="Cronograma"></a>
 | SPRINTS| DATA INÍCIO | DATA TÉRMINO | STATUS |
 | :------:| :----------: | :-----------: | :-----: |
-| Sprint 1 |  04/09/23 | 24/09/23 | ✔️ |
+| [Sprint 1](https://github.com/BispoJPM/Backup/blob/Sprint-1/README.md) |  04/09/23 | 24/09/23 | ✔️ |
 | Sprint 2 | 25/09/23 | 15/10/23 | 🚧 |
 | Sprint 3 | 16/10/23 | 05/11/23 | 🚧 |
 | Sprint 4 | 06/11/23 | 26/11/23 | 🚧 |
@@ -76,8 +86,30 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <img align="center" alt="Teams" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/75b3fd0f-a4dd-4762-9217-814114c484b8" />
 <img align="center" alt="Excel" height="35" width="50" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/20af340e-2d3c-475c-9924-3dc4a1c9f83b" />
 
+## Wireframe V2
+
+<a name="Wireframe V2"></a>
+
+<p float="left">
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/1bef8ca7-78ba-417f-b21e-7e3608f73840" width="48%" />
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/acc2a1a7-892b-43fe-b515-8b6464b377b8" width="48%" />
+</p>
+<p float="left">
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/3485f107-92c2-4b16-9545-1ed44b762fbd" width="48%" />
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/6e8bdd15-f8c5-4cd1-bfb0-8910faf37550" width="48%" />
+</p>
+<p float="left">
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/30eba6c3-0910-4fdc-ac0c-3824758f1eaa" width="48%" />
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/1447ec45-6ebf-4b7f-aabd-f18111bc87f9" width="48%" />
+</p>
+<p float="left">
+  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/43a98523-f3aa-4544-bc4f-b1a2ec042e2e" width="48%" />
+</p>
+
+
 
 ## Wireframe
+
 <a name="Wireframe"></a>
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/1bef8ca7-78ba-417f-b21e-7e3608f73840" alt="Capa" style="width:700px;height:400px;"></p>
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/6e8bdd15-f8c5-4cd1-bfb0-8910faf37550" alt="Capa" style="width:700px;height:400px;"></p>
@@ -86,3 +118,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/30eba6c3-0910-4fdc-ac0c-3824758f1eaa" alt="Capa" style="width:700px;height:400px;"></p>
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/acc2a1a7-892b-43fe-b515-8b6464b377b8" alt="Capa" style="width:700px;height:400px;"></p>
 <p align="center"><img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/3485f107-92c2-4b16-9545-1ed44b762fbd" alt="Capa" style="width:700px;height:400px;"></p>
+
+
+
+→ [Voltar ao topo](#topo)
