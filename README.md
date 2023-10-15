@@ -55,7 +55,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 | Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
 | Como administrador, quero definir o tempo total de curso e criar ciclos de entrega | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
 | Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
-| Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | 🚧 | 
+| Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | ✔️ | 
 | Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 3 | Sprint 3 | 🚧 | 
 | Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 |  
