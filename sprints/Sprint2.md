@@ -5,7 +5,7 @@
 ## Sprint Backlog
 | TAREFAS | STATUS |
 | :-----------: | :-----: |
-| Criar uma página no perfil do aluno que liste todas as turmas em que ele está matriculado, exibindo informações relevantes, como nome do curso, data de início, data de término, nome do(s) professor(es) e notas dentro de cada turma. | 🚧 |
+| Criar uma página no perfil do aluno que liste todas as turmas em que ele está matriculado, exibindo informações relevantes, como nome da turma, data de início, data de término, nome do(s) professor(es) e notas dentro de cada turma. | 🚧 |
 | Assegurar que as informações sobre as turmas sejam atualizadas automaticamente para refletir qualquer alteração na matrícula dos alunos. | 🚧 |
 | Criar uma função administrativa que permita aos administradores selecionar turmas específicas para fechar. | ✔️ |
 | Implemente uma funcionalidade de administração que permita aos administradores criar grupos dentro de turmas. | ✔️ |
