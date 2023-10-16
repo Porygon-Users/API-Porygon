@@ -84,25 +84,4 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <img align="center" alt="Teams" height="40" width="40" src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/75b3fd0f-a4dd-4762-9217-814114c484b8" />
 <img align="center" alt="Excel" height="35" width="50" src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/20af340e-2d3c-475c-9924-3dc4a1c9f83b" />
 
-## Wireframe
-
-<a name="Wireframe"></a>
-
-<p float="left">
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/1bef8ca7-78ba-417f-b21e-7e3608f73840" width="48%" />
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/acc2a1a7-892b-43fe-b515-8b6464b377b8" width="48%" />
-</p>
-<p float="left">
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/3485f107-92c2-4b16-9545-1ed44b762fbd" width="48%" />
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/6e8bdd15-f8c5-4cd1-bfb0-8910faf37550" width="48%" />
-</p>
-<p float="left">
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/30eba6c3-0910-4fdc-ac0c-3824758f1eaa" width="48%" />
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/1447ec45-6ebf-4b7f-aabd-f18111bc87f9" width="48%" />
-</p>
-<p float="left">
-  <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/43a98523-f3aa-4544-bc4f-b1a2ec042e2e" width="48%" />
-</p>
-
-
 → [Voltar ao topo](#topo)
