@@ -54,8 +54,8 @@
 #### Criação de grupos
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/f836a4e0-a99d-4936-8cdf-21e7b555f8b7)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/19143a8c-d3df-4a1e-896f-d52fd07695c7)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/790f1fa6-9b79-4cef-8f27-6188f646f17f)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/d0e54159-1393-498b-8a47-c6a9609b96f9)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/790f1fa6-9b79-4cef-8f27-6188f646f17f)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/5e0ef656-6dbe-47eb-9612-13c7609daf90)
 
 
