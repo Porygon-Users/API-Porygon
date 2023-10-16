@@ -49,7 +49,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 
 ## Backlog do Produto
 <a name="Backlog do Produto"></a>
-| User Story  | Descrição  | Prioridade | Sprint  | Status |
+| User Story  | Benefícios  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
 | Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
 | Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
