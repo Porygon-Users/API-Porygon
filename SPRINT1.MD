@@ -15,3 +15,4 @@
 | Distribuição de Alunos e Professores em Turmas | Distribuição equitativa de alunos em turmas |✔️ |
 | Distribuição de Alunos e Professores em Turmas | Implementação da criação ilimitada de turmas | ✔️ |
 | Distribuição de Alunos e Professores em Turmas | Associação de alunos e professores às turmas | ✔️ |
+
