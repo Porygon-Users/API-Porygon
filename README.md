@@ -104,29 +104,5 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
   <img src="https://github.com/Porygon-Users/API-Porygon/assets/142633184/43a98523-f3aa-4544-bc4f-b1a2ec042e2e" width="48%" />
 </p>
 
-## Sprint 1
-<a name="Sprint 1"></a>
-> A Sprint 1 é o ponto de partida para o nosso projeto, um cronograma dinâmico que irá rastrear e documentar o progresso das tarefas à medida que avançamos. Este espaço será preenchido com checklists e à medida que alcançamos marcos importantes, serão marcadas, permitindo-nos manter um registro claro e detalhado do nosso sucesso na realização de objetivos.
-
-### Backlog Sprint 1
-<table>
-    <tr>
-        <td align="center">REQUISITO FUNCIONAL_ID</td>
-        <td align="center">REQUISITOS DA SPRINT</td>
-        <td align="center">TAREFA INICIADA</td>
-        <td align="center">STATUS</td>
-    </tr>
-       <tr>
-        <td>RF - 4</td>
-        <td> Cadastro de Alunos e Professores</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-    </tr>
-        <tr>
-        <td>RF - 4</td>
-        <td> Criação de Turmas</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-    </tr>
 
 → [Voltar ao topo](#topo)
