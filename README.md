@@ -66,8 +66,8 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <a name="Cronograma"></a>
 | SPRINTS| DATA INÍCIO | DATA TÉRMINO | STATUS |
 | :------:| :----------: | :-----------: | :-----: |
-| [Sprint 1](https://github.com/Porygon-Users/API-Porygon/blob/main/SPRINT1.md)|  04/09/23 | 24/09/23 | ✔️ |
-| [Sprint 2](https://github.com/Porygon-Users/API-Porygon/blob/main/SPRINT2.md) | 25/09/23 | 15/10/23 | 🚧 |
+| [Sprint 1](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint1.md)|  04/09/23 | 24/09/23 | ✔️ |
+| [Sprint 2](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint2.md) | 25/09/23 | 15/10/23 | 🚧 |
 | Sprint 3 | 16/10/23 | 05/11/23 | 🚧 |
 | Sprint 4 | 06/11/23 | 26/11/23 | 🚧 |
 
