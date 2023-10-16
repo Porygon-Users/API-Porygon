@@ -6,13 +6,13 @@
 <a name="Cronograma"></a>
 | USER STORYS | TAREFAS | STATUS |
 | :------:| :-----------: | :-----: |
-| 1 | Criação do banco de dados "Dados Cadastrais" no Excel | ✔️ |
-| 1 | Criação de código de cadastro para alunos e professores | ✔️ |
-| 1 | Implementação do cadastro ilimitado + opção "Deseja cadastrar outro?" | ✔️ |
-| 1 | Geração de login e senha para cada cadastro | ✔️ |
-| 2 | Implementação da criação ilimitada de turmas | ✔️ |
-| 2 | Associação de alunos e professores às turmas | ✔️ |
-| 3 | Distribuição equitativa de alunos em turmas |✔️ |
-| 3 | Implementação da criação ilimitada de turmas | ✔️ |
-| 3 | Associação de alunos e professores às turmas | ✔️ |
+| US 1 | Criação do banco de dados "Dados Cadastrais" no Excel | ✔️ |
+| US 1 | Criação de código de cadastro para alunos e professores | ✔️ |
+| US 1 | Implementação do cadastro ilimitado + opção "Deseja cadastrar outro?" | ✔️ |
+| US 1 | Geração de login e senha para cada cadastro | ✔️ |
+| US 2 | Implementação da criação ilimitada de turmas | ✔️ |
+| US 2 | Associação de alunos e professores às turmas | ✔️ |
+| US 3 | Distribuição equitativa de alunos em turmas |✔️ |
+| US 3 | Implementação da criação ilimitada de turmas | ✔️ |
+| US 3 | Associação de alunos e professores às turmas | ✔️ |
 
