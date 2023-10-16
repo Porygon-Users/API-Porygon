@@ -17,11 +17,11 @@
 
 ## Wireframes
 
-Página inicial
+###Página inicial
 ![PI](https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)
 
-Página de cadastro para alunos e professoares
-![PCAP](https://user-images.githubusercontent.com/142633184/270184315-acc2a1a7-892b-43fe-b515-8b6464b377b8.png)]
+###Página de cadastro para alunos e professoares
+![PCAP](https://user-images.githubusercontent.com/142633184/270184315-acc2a1a7-892b-43fe-b515-8b6464b377b8.png)
 
-Página de cadastro
+###Página de cadastro
 ![PC](https://user-images.githubusercontent.com/142633184/270184316-3485f107-92c2-4b16-9545-1ed44b762fbd.png)
