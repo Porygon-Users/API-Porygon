@@ -4,11 +4,14 @@
 
 ### Cronograma
 <a name="Cronograma"></a>
-| USER STORYS|  | TAREFAS | STATUS |
-| :------:| :----------: | :-----------: | :-----: |
+| USER STORYS | TAREFAS | STATUS |
+| :------:| :-----------: | :-----: |
 | Cadastro de Alunos e Professores | Criação do banco de dados "Dados Cadastrais" no Excel | ✔️ |
+| Cadastro de Alunos e Professores | Criação de código de cadastro para alunos e professores | ✔️ |
 | Cadastro de Alunos e Professores | Implementação do cadastro ilimitado + opção "Deseja cadastrar outro?" | ✔️ |
 | Cadastro de Alunos e Professores | Geração de login e senha para cada cadastro | ✔️ |
-| Criação de Turmas | Criação de uma branch no GitHub |✔️ |
 | Criação de Turmas | Implementação da criação ilimitada de turmas | ✔️ |
-| Criação de Turmas |Associação de alunos e professores às turmas | ✔️ |
+| Criação de Turmas | Associação de alunos e professores às turmas | ✔️ |
+| Distribuição de Alunos e Professores em Turmas | Distribuição equitativa de alunos em turmas |✔️ |
+| Distribuição de Alunos e Professores em Turmas | Implementação da criação ilimitada de turmas | ✔️ |
+| Distribuição de Alunos e Professores em Turmas | Associação de alunos e professores às turmas | ✔️ |
