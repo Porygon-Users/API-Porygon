@@ -15,7 +15,6 @@
   
 ## Integrantes
 <a name="Integrantes"></a>
-<p align = "center">
 
 | NOME | ATRIBUIÇÃO | REDES SOCIAIS    | IDENTIFICAÇÃO |
 | :-----:| :----------: | :-------------:   | :-------------: |  
@@ -28,12 +27,12 @@
 | Guilherme | Desenvolvedor | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://br.linkedin.com/in/guilherme-bezerra-a01035170) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/GuilhermebJunqueira)| <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/8333ed84-8db6-4bf5-9650-7783862c1995" height="60"/>
 | Samara | Desenvolvedor | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/samara-c-viana-de-abreu/?originalSubdomain=br) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/Samara-breu)| <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/2c34877d-b50d-4c26-9e0a-466c72230d80" height="60"/>
 
-## Desafio Proposto
+## 🎯 Desafio Proposto
 <a name="Desafio Proposto"></a>
 > A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
 instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos de entregas que por sua vez entregam os scores parciais de seus alunos para no final computar o FEE (Fator de Ensino Evolutivo). O desafio será de apoiar a instituição e desenvolver uma sistema de informação que viabilize a aplicação desta técnica diferenciada.
 
-## Objetivo
+## 📍Objetivo
 <a name="Objetivo"></a>
 > Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
 
@@ -48,6 +47,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 • O SI deve permitir a Configuração de parâmetros globai;s<br />
 • O SI deve permitir a exportação de dados consolidados, computados e métricas inferidas;<br />
 • O SI deve prover visibilidades objetivas e diretas que possibilitem o acompanhamento dos cursos providos pela PBLTeX.<br />
+
 
 ## Backlog do Produto
 <a name="Backlog do Produto"></a>
@@ -64,12 +64,12 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | 🚧 |  
 | Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe | 1 | Sprint 4 | 🚧 | 
 
-## Cronograma
+## 📅 Cronograma
 <a name="Cronograma"></a>
 | SPRINTS| DATA INÍCIO | DATA TÉRMINO | STATUS |
 | :------:| :----------: | :-----------: | :-----: |
 | [Sprint 1](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint1.md)|  04/09/23 | 24/09/23 | ✔️ |
-| [Sprint 2](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint2.md) | 25/09/23 | 15/10/23 | 🚧 |
+| [Sprint 2](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint2.md) | 25/09/23 | 15/10/23 | ✔️ |
 | Sprint 3 | 16/10/23 | 05/11/23 | 🚧 |
 | Sprint 4 | 06/11/23 | 26/11/23 | 🚧 |
 
