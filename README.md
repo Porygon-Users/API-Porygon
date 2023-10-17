@@ -51,16 +51,16 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 <a name="Backlog do Produto"></a>
 | ID | User Story  | Benefícios  | Prioridade | Sprint  | Status |
 | :---: |:------------:|:----------:|:-----:|:--------:|:------:|
-| 1 | Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
-| 2 | Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
-| 3 | Como administrador, quero definir o tempo total de curso e criar ciclos de entrega | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
-| 4 | Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
-| 5 | Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | ✔️ | 
-| 6 | Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
-| 7 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 3 | Sprint 3 | 🚧 | 
-| 8 | Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 |  
-| 9 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | 🚧 |  
-| 10 | Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe | 1 | Sprint 4 | 🚧 | 
+| Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
+| Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
+| Como administrador, quero definir o tempo total de curso e criar ciclos de entrega | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
+| Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
+| Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | ✔️ | 
+| Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
+| Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 3 | Sprint 3 | 🚧 | 
+| Como professor, quero conseguir gerar um relatório de desempenho de cada aluno. | Para avaliar o progresso dos alunos e tomar decisões educacionais informadas. | 2 |Sprint 3 | 🚧 |  
+| Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | 🚧 |  
+| Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe | 1 | Sprint 4 | 🚧 | 
 
 ## Cronograma
 <a name="Cronograma"></a>
