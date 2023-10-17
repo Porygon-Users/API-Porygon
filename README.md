@@ -13,7 +13,7 @@
 <a href="#Ferramentas Utilizadas">Ferramentas Utilizadas</a> •
 <a href="#Wireframe">Wireframe</a>
   
-## Integrantes
+## 👤 Integrantes
 <a name="Integrantes"></a>
 
 | NOME | ATRIBUIÇÃO | REDES SOCIAIS    | IDENTIFICAÇÃO |
