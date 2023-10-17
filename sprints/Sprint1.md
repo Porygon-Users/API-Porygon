@@ -4,6 +4,7 @@
 <a href="##Objetivo">Objetivo</a> •
 <a href="##Sprint Backlog">Sprint Backlog</a> •
 <a href="##Wireframes">Wireframes</a> 
+</p>
 
 ## Objetivo
 <a name="Objetivo"></a>
