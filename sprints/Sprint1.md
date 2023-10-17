@@ -1,5 +1,9 @@
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/711c347c-7a93-4a38-80ad-0cb60b199454)
 
-<p align="center"><img src="![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/21391836-e63b-40ce-a66e-c0d5a9f6df64)" alt="Capa" style="width:1500px;height:500px;"></p>
+<p align = "center">
+<a href="##Objetivo">Objetivo</a> •
+<a href="##Sprint Backlog">Sprint Backlog</a> •
+<a href="##Wireframe">Wireframe</a> 
 
 ## Objetivo
 <a name="Objetivo"></a>
@@ -20,6 +24,23 @@
 
 ## Wireframes
 
+<p align = "center">
+<a href="### Página inicial">Página inicial</a> •
+<a href="### Página para selecionar o tipo de cadastro">Página para selecionar o tipo de cadastro</a> •
+<a href="### Página de cadastro">Página de cadastro</a> •
+<a href="### Menu de configuração de turmas">Menu de configuração de turmas</a> •
+<a href="### Criação de turmas"Criação de turmas</a> •
+<a href="### Visualização de turmas">Visualização de turmas</a> 
+<a href="### Exclusão de turmas">Exclusão de turmas</a> •
+<a href="### Criação de grupos">Criação de grupos</a> •
+<a href="### Fechamneto de turmas">Fechamneto de turmas</a> •
+<a href="### Associação de alunos e professores nas turmas">Associação de alunos e professores nas turmas</a> •
+<a href="### Associação de professores">Associação de professores</a> •
+<a href="### Associação de alunos">Associação de alunos</a> 
+<a href="### Vizualização de alunos não alocados">Vizualização de alunos não alocados</a> •
+<a href="###Criação de grupos">Criação de grupos</a> 
+
+
 ### Página inicial
 
 ![i](https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)
@@ -39,24 +60,24 @@
 
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/4bc64182-0d55-4cb5-b139-dbe3d6a011cb)
 
-#### Menu de configuração de turmas
+### Menu de configuração de turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fa515bf0-c245-446c-9570-00c9ea67b99b)
 
-#### Criação de turmas
+### Criação de turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/176d7ddb-74d8-4616-89f6-fb6df2747f77)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/e98215ad-ccc9-4b56-bb4e-72c9ac1edbf4)
 
 
-#### Visualização de turmaa
+### Visualização de turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/7b214c20-8771-403a-be68-decaea1a5918)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/6e9294b8-8b62-4485-820d-fca9eae88f34)
 
-#### Exclusão de turmas
+### Exclusão de turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/de3ecce7-a688-4238-963f-939a20c4f286)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/c3a7f379-459b-4999-adfc-0d1cb427df26)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/b406f2c6-4227-466a-b809-adb71361969d)
 
-#### Criação de grupos
+### Criação de grupos
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/f836a4e0-a99d-4936-8cdf-21e7b555f8b7)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/19143a8c-d3df-4a1e-896f-d52fd07695c7)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/d0e54159-1393-498b-8a47-c6a9609b96f9)
@@ -64,7 +85,7 @@
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/5e0ef656-6dbe-47eb-9612-13c7609daf90)
 
 
-#### Fechamneto de turmas
+### Fechamneto de turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/b404c7ae-e5db-49c0-bdec-5a496e0e653d)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/f5eef178-3d84-40e5-bf2a-4ce124e73a48)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/951af440-2fff-4f82-98cf-341e30e7b155)
@@ -73,11 +94,11 @@
 ### Associação de alunos e professores nas turmas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/e1ea2f64-396a-4905-b762-2de36cf74d3d)
 
-#### Associação de professores
+### Associação de professores
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/a7f75544-1f61-4ccf-a734-c22833fa3fd5)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/955ecb68-dd18-4144-ab20-09a791b45107)
 
-#### Associação de alunos
+### Associação de alunos
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/54e0e290-b271-4478-82a6-5dff518d4fb7)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/f1fa1f8d-6c25-48fa-992d-a78767ba5c4c)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/4287865d-3129-4936-be89-ad37b138b0a9)
