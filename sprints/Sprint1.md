@@ -18,10 +18,10 @@
 ## Wireframes
 
 ### Página inicial
-<p float="left">
- <img src="https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)"/>
- <img src="(https://github.com/Porygon-Users/API-Porygon/assets/145280630/5c1a1756-f1ae-409d-a6fe-a735b67731af)"/>
-</p>
+
+![i](https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)
+![o](https://github.com/Porygon-Users/API-Porygon/assets/145280630/5c1a1756-f1ae-409d-a6fe-a735b67731af)
+
   
 ### Página para selecionar o tipo de cadastro
 
