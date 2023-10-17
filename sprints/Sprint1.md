@@ -1,3 +1,6 @@
+
+<p align="center"><img src="![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/21391836-e63b-40ce-a66e-c0d5a9f6df64)" alt="Capa" style="width:1500px;height:500px;"></p>
+
 ## Objetivo
 <a name="Objetivo"></a>
 > A Sprint 1 é o ponto de partida para o nosso projeto, um cronograma dinâmico que irá rastrear e documentar o progresso das tarefas à medida que avançamos. Este espaço será preenchido com checklists e à medida que alcançamos marcos importantes, serão marcadas, permitindo-nos manter um registro claro e detalhado do nosso sucesso na realização de objetivos.
