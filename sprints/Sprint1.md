@@ -18,10 +18,11 @@
 ## Wireframes
 
 ### Página inicial
-
-![PI](https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/5c1a1756-f1ae-409d-a6fe-a735b67731af)
-
+<p float="left">
+ <img src="https://user-images.githubusercontent.com/142633184/270184308-1bef8ca7-78ba-417f-b21e-7e3608f73840.png)"/>
+ <img src="(https://github.com/Porygon-Users/API-Porygon/assets/145280630/5c1a1756-f1ae-409d-a6fe-a735b67731af)"/>
+</p>
+  
 ### Página para selecionar o tipo de cadastro
 
 ![PCAP](https://user-images.githubusercontent.com/142633184/270184315-acc2a1a7-892b-43fe-b515-8b6464b377b8.png)
@@ -39,10 +40,9 @@
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fa515bf0-c245-446c-9570-00c9ea67b99b)
 
 #### Criação de turmas
-<p float="left">
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/176d7ddb-74d8-4616-89f6-fb6df2747f77)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/e98215ad-ccc9-4b56-bb4e-72c9ac1edbf4)
-</p>
+
 
 #### Visualização de turmaa
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/7b214c20-8771-403a-be68-decaea1a5918)
