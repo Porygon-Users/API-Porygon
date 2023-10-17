@@ -39,8 +39,10 @@
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fa515bf0-c245-446c-9570-00c9ea67b99b)
 
 #### Criação de turmas
+<p float="left">
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/176d7ddb-74d8-4616-89f6-fb6df2747f77)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/e98215ad-ccc9-4b56-bb4e-72c9ac1edbf4)
+</p>
 
 #### Visualização de turmaa
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/7b214c20-8771-403a-be68-decaea1a5918)
