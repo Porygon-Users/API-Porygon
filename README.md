@@ -15,6 +15,7 @@
   
 ## Integrantes
 <a name="Integrantes"></a>
+<p align = "center">
 | NOME | ATRIBUIÇÃO | REDES SOCIAIS    | IDENTIFICAÇÃO |
 | :-----:| :----------: | :-------------:   | :-------------: |  
 | João Pedro | Scrum Master  | [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/joão-pedro-marcondes-563369181/) [<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/BispoJPM) | <img src="https://github.com/Porygon-Users/API-Porygon/assets/145280630/b24402c4-748c-4d21-bc9e-f81200369d18" height="60" />
