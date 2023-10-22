@@ -1,25 +1,34 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
-st.set_page_config(page_title="Meu Site Streamlit")
+st.set_page_config(layout="wide") #configuração do site para ficar no layout correto
 
-with st.container():
-    st.subheader("Meu primeiro site com o Streamlit")
-    st.title("Dashboard de Contratos")
-    st.write("Informações sobre os contratos fechados pela Hash&Co ao longo de maio")
-    st.write("Quer aprender Python? [Clique aqui](https://www.hashtagtreinamentos.com/curso-python)")
+df_turma1 = pd.read_excel("infodados.xlsx", sheet_name='Turma 1 (fechada)')
+df_turma2 = pd.read_excel("infodados.xlsx", sheet_name= "Turma 2")
+
+#all_spreadsheets = pd.concat(df_turma1,df_turma2)
+df_turma1["Início do Ciclo"] = pd.to_datetime(df_turma1["Início do Ciclo"])
+
+df_turma1 = df_turma1.sort_values("Início do Ciclo")
+
+df_turma1["Month"] = df_turma1["Início do Ciclo"].apply(lambda x: str(x.year) + "-" + str(x.month))
+
+monthy = st.sidebar.selectbox("Ciclos", df_turma1["Month"].unique())
+
+df_filtered = df_turma1[df_turma1["Month"] == monthy] 
+
+col1, col2 = st.columns(2)
+col3, col4, col5 = st.columns(3)
+
+df_filtered
 
 
-@st.cache_data
-def carregar_dados():
-    tabela = pd.read_csv("resultados.csv")
-    return tabela
 
-with st.container():
-    st.write("---")
-    qtde_dias = st.selectbox("Selecione o período", ["7D", "15D", "21D", "30D"])
-    num_dias = int(qtde_dias.replace("D", ""))
-    dados = carregar_dados()
-    dados = dados[-num_dias:]
-    st.area_chart(dados, x="Data", y="Contratos")
+#df_turma1 = df_turma1.sort_values(df_turma1["Início do Ciclo"])
+
+#df_turma1["Monthy"] = df_turma1["Início do Ciclo"].apply(lambda x: str(x.year) + )
+
+
+
 
