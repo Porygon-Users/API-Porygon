@@ -1,18 +1,13 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
 
-# Obtenha o diretório atual do script
-dir_path = os.path.dirname(os.path.abspath(__file__))
-
-# Construa o caminho relativo para o arquivo Excel
 excel_file_path = os.path.join(dir_path, "infodados.xlsx")
 
 st.set_page_config(layout="wide") #configuração do site para ficar no layout correto
 
-df_turma1 = pd.read_excel("infodados.xlsx", sheet_name='Turma 1 (fechada)')
-df_turma2 = pd.read_excel("infodados.xlsx", sheet_name= "Turma 2")
+df_turma1 = pd.read_excel("C:\Users\Isaque\Documents\API-Porygon\database\infodados.xlsx", sheet_name='Turma 1 (fechada)')
+#df_turma2 = pd.read_excel("infodados.xlsx", sheet_name= "Turma 2")
 
 #all_spreadsheets = pd.concat(df_turma1,df_turma2)
 # df_turma1["Início do Ciclo"] = pd.to_datetime(df_turma1["Início do Ciclo"])
