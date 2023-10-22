@@ -1,6 +1,13 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
+
+# Obtenha o diretório atual do script
+dir_path = os.path.dirname(os.path.abspath(__file__))
+
+# Construa o caminho relativo para o arquivo Excel
+excel_file_path = os.path.join(dir_path, "infodados.xlsx")
 
 st.set_page_config(layout="wide") #configuração do site para ficar no layout correto
 
