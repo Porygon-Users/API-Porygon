@@ -106,11 +106,11 @@ def adicionar_data_e_ciclos(planilha, turma_destino):
         aba_turma.cell(row=i + 2, column=11).value = dias_ciclo
         print(f"\n{ciclo_nome} terá {dias_ciclo} dias.")
 
-    planilha.save('Dados Cadastrais.xlsx')
+    planilha.save('infodados.xlsx')
     print("\n----Data de início, fim do curso e ciclos adicionados com sucesso!!----")
 
 # Abrir a planilha
-planilha = openpyxl.load_workbook('Dados Cadastrais.xlsx')
+planilha = openpyxl.load_workbook('infodados.xlsx')
 
 while True:
     print("\nOpções:")
