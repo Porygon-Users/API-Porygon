@@ -43,3 +43,4 @@ col3, col4, col5 = st.columns(3)
 
 nota_por_aluno = px.bar(df_selecao, x="Alunos", y="Nota", title="Nota por aluno")
 col1.plotly_chart(nota_por_aluno)
+print("a")
