@@ -1,6 +1,6 @@
 import os
 import openpyxl
-#3PRECISAMOS TESTAR
+
 def criar_aba_notas(book):
     if 'Notas' not in book.sheetnames:
         book.create_sheet('Notas')
@@ -129,7 +129,7 @@ def atribuir_notas(book, turma):
                 nota = float(input(f"Digite a nota para {aluno} no ciclo {ciclo_atual_idx}: "))
                 transferir_aluno_para_notas(book, turma, aluno, ciclo_atual_idx, nota)
         except ValueError:
-            print("\nEntre APENAS COM NUMEROS SEU CABAÇO")
+            print("\nErro: tente novamente apenas com números.")
         book.save(caminho_arquivo_excel)
 
 
