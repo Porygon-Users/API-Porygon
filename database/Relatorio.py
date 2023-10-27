@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(layout="wide", page_title="Relatórios gerais", page_icon=":bar_chart:")
+st.set_page_config(layout="wide", page_title="Relatórios gerais", page_icon=":bar_chart:") 
+
+st.sidebar.image("pbltex.jpg",caption = "Análise de dados") #inserção da imagem
 
 st.title("Relatório das Turmas")
 
