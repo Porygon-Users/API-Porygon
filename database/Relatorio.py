@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
+#Configurações da página 
 st.set_page_config(layout="wide", page_title="Relatórios gerais", page_icon=":bar_chart:") 
-
 st.sidebar.image("pbltex.jpg",caption = "Análise de dados") #inserção da imagem
-
 st.title("Relatório das Turmas")
 
 # Ler todas as planilhas do arquivo Excel
@@ -23,7 +23,6 @@ selected_sheet = st.sidebar.selectbox("Selecione a turma:", turma_sheets)
 
 # Ler os dados da planilha selecionada
 df_turma = pd.read_excel("infodados.xlsx", sheet_name=selected_sheet)
-
 
 alunos_selecionados = []    
 
@@ -49,10 +48,7 @@ alunos_selecionados = st.sidebar.multiselect("Selecione os alunos:", alunos_unic
 
 
 # Filtrar o DataFrame com base nos alunos selecionados e no ciclo selecionado
-df_selecao = df_turma[df_turma["Alunos"].isin(alunos_selecionados)][["Alunos", selected_ciclo, "Média"]]
-
-# Preencher valores nulos na coluna "Média" com 0
-df_selecao["Média"].fillna(0, inplace=True)
+df_selecao = df_turma[df_turma["Alunos"].isin(alunos_selecionados)][["Alunos", selected_ciclo, "Média","Professores","Início do Curso","Fim do Curso"]]
 
 st.dataframe(df_selecao)
 
