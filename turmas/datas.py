@@ -14,65 +14,112 @@ else:
     planilha = openpyxl.Workbook()
     planilha.save(caminho_arquivo_excel)
 
-# Função para adicionar a data de início do curso e calcular o fim do curso
+def verificar_ciclo(n, x, y):
+    if n > x or n < y:
+        print("Data está fora do ciclo de curso, tente novamente")
+    else:
+        pass
+
 def adicionar_data_e_ciclos(planilha, turma_destino):
     aba_turma = planilha[turma_destino]
-
-    data_inicio = datetime.strptime(input("\nDigite a data de início do curso (DD/MM/AAAA): "), "%d/%m/%Y")
-    data_fim = datetime.strptime(input("Digite a data de término do curso (DD/MM/AAAA): "), "%d/%m/%Y")
-
-    qtd_ciclos = int(input("\nQuantos ciclos você deseja: "))
-
-    # Calcular a duração de cada ciclo
-    duracao_ciclo = (data_fim - data_inicio) / qtd_ciclos
-
     ciclos = []
 
-    for i in range(qtd_ciclos):
-        ciclo_nome = f"Ciclo {i + 1}"
-        ciclo_inicio = data_inicio + i * duracao_ciclo
-        ciclo_fim = ciclo_inicio + duracao_ciclo - timedelta(days=1)
-        ciclos.append((ciclo_nome, ciclo_inicio, ciclo_fim))
+    while True:
+        try:
+            data_inicio = datetime.strptime(input("\nDigite a data de início do curso (DD/MM/AAAA): "), "%d/%m/%Y")
+            data_fim = datetime.strptime(input("Digite a data de término do curso (DD/MM/AAAA): "), "%d/%m/%Y")
+            if data_fim < data_inicio:
+                print("A data de término é anterior à data de início, tente novamente")
+            else:
+                break
+        except ValueError:
+            print("Formato de data inválido. Use o formato DD/MM/AAAA")
 
-    # Adicionar cabeçalhos para as datas de início e término do curso
     aba_turma.cell(row=1, column=7).value = "Início do Curso"
     aba_turma.cell(row=1, column=8).value = "Fim do Curso"
-
-    # Preencher as datas de início e término do curso
     aba_turma.cell(row=2, column=7).value = data_inicio.strftime('%d/%m/%Y')
     aba_turma.cell(row=2, column=8).value = data_fim.strftime('%d/%m/%Y')
 
-    # Adicionar cabeçalhos para os dias do ciclo, início e término do ciclo
     aba_turma.cell(row=1, column=9).value = "Início do Ciclo"
     aba_turma.cell(row=1, column=10).value = "Término do Ciclo"
     aba_turma.cell(row=1, column=11).value = "Dias do Ciclo"
 
-    # Estilizar os cabeçalhos
-    cabecalho_fonte = Font(bold=True, size=11)  # Negrito e tamanho de fonte razoável
-    cabecalho_alinhamento = Alignment(horizontal='center')  # Centralizar o texto
+    qtd_ciclos = int(input("\nQuantos ciclos você deseja: "))
 
-    for coluna in range(7, 12):  # Aplicar estilos para as colunas 7 a 11
-        aba_turma.cell(row=1, column=coluna).font = cabecalho_fonte
-        aba_turma.cell(row=1, column=coluna).alignment = cabecalho_alinhamento
+    while True:
+        choice_cycle_type = input("\nEscolha o tipo do ciclo:\n\n1-Simétrico\n2-Definir cada ciclo\n\nEscolha uma das opções: ")
+        if choice_cycle_type == "1" or choice_cycle_type == "2":
+            break
+        else:
+            print("Opção inválida, tente novamente")
 
-    # Ajustar a largura das colunas (por exemplo, para as colunas 7 a 11)
-    largura_coluna = 20  # Ajuste o valor conforme necessário
-    for coluna in range(7, 12):
-        aba_turma.column_dimensions[openpyxl.utils.get_column_letter(coluna)].width = largura_coluna
+    if choice_cycle_type == "1":
+        duracao_ciclo = (data_fim - data_inicio) / qtd_ciclos
 
-    # Calcular e adicionar a quantidade de dias do ciclo
+        for i in range(qtd_ciclos - 1):
+            ciclo_nome = f"Ciclo {i + 1}"
+            ciclo_inicio = data_inicio + i * duracao_ciclo
+            ciclo_fim = ciclo_inicio + duracao_ciclo - timedelta(days=1)
+            ciclos.append((ciclo_nome, ciclo_inicio, ciclo_fim))
+
+        ultimo_ciclo_nome = f"Ciclo {qtd_ciclos}"
+        ultimo_ciclo_inicio = data_inicio + (qtd_ciclos - 1) * duracao_ciclo
+        ultimo_ciclo_fim = data_fim
+        ciclos.append((ultimo_ciclo_nome, ultimo_ciclo_inicio, ultimo_ciclo_fim))
+
+    elif choice_cycle_type == "2":
+        while True:
+            try:
+                duracao_ciclo = (data_fim - data_inicio)
+                ciclo_datas = []  # Para armazenar as datas de início dos ciclos
+                ciclo_datas_fim = []  # Para armazenar as datas de término dos ciclos
+
+                for i in range(qtd_ciclos):
+                    ciclo_nome = f"Ciclo {i + 1}"
+                    while True:
+                        try:
+                            ciclo_inicio = datetime.strptime(input(f"\nDigite a data de início do {ciclo_nome} (DD/MM/AAAA): "), "%d/%m/%Y")
+                            if ciclo_inicio < data_inicio or ciclo_inicio > data_fim:
+                                print("Data está fora do ciclo de curso, tente novamente")
+                            elif ciclo_inicio in ciclo_datas:
+                                print("A data de início do ciclo já foi escolhida antes, tente novamente")
+                            elif ciclo_inicio < max(ciclo_datas_fim, default=data_inicio):
+                                print("A data de início do ciclo deve ser posterior à data de término do ciclo anterior.")
+                            else:
+                                break
+                        except ValueError:
+                            print("Formato de data inválido. Use o formato DD/MM/AAAA.")
+
+                    while True:
+                        try:
+                            ciclo_fim = datetime.strptime(input(f"Digite a data de finalização do {ciclo_nome} (DD/MM/AAAA): "), "%d/%m/%Y")
+                            if ciclo_fim < data_inicio or ciclo_fim > data_fim:
+                                print("Data está fora do ciclo de curso, tente novamente")
+                            elif ciclo_fim in ciclo_datas or ciclo_fim in ciclo_datas_fim:
+                                print("A data de término do ciclo já foi escolhida antes, tente novamente")
+                            elif ciclo_fim < ciclo_inicio:
+                                print("A data de término do ciclo deve ser posterior à data de início do ciclo.")
+                            else:
+                                break
+                        except ValueError:
+                            print("Formato de data inválido. Use o formato DD/MM/AAAA.")
+
+                    ciclos.append((ciclo_nome, ciclo_inicio, ciclo_fim))
+                    ciclo_datas.append(ciclo_inicio)
+                    ciclo_datas_fim.append(ciclo_fim)
+
+                break
+            except ValueError:
+                print("Formato de data inválido. Use o formato DD/MM/AAAA.")
+
     for i, (ciclo_nome, ciclo_inicio, ciclo_fim) in enumerate(ciclos):
         aba_turma.cell(row=i + 2, column=9).value = ciclo_inicio.strftime('%d/%m/%Y')
         aba_turma.cell(row=i + 2, column=10).value = ciclo_fim.strftime('%d/%m/%Y')
-
-        # Calcular e adicionar a quantidade de dias do ciclo
         dias_ciclo = (ciclo_fim - ciclo_inicio).days + 1
         aba_turma.cell(row=i + 2, column=11).value = dias_ciclo
-
-        # Exibir a quantidade de dias do ciclo
         print(f"\n{ciclo_nome} terá {dias_ciclo} dias.")
 
-    # Salvar a planilha no arquivo infodados.xlsx
+# Salvar a planilha no arquivo infodados.xlsx
     caminho_arquivo_excel = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'database', 'infodados.xlsx')
     planilha.save(caminho_arquivo_excel)
     print("\n----Data de início, fim do curso e ciclos adicionados com sucesso!!----")
@@ -80,15 +127,9 @@ def adicionar_data_e_ciclos(planilha, turma_destino):
 # Abrir a planilha
 caminho_arquivo_excel = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'database', 'infodados.xlsx')
 
-if os.path.exists(caminho_arquivo_excel):
-    planilha = openpyxl.load_workbook(caminho_arquivo_excel)
-else:
-    planilha = openpyxl.Workbook()
-    planilha.save(caminho_arquivo_excel)
-
 while True:
     print("\nOpções:")
-    print("\n1. Adicionar data de início do curso e criar ciclos")
+    print("\n1. Adicionar data de início do curso e criar ciclos")  
     print("2. Sair do programa", "\n")
 
     escolha = input("Escolha uma das opções: ")
@@ -114,5 +155,3 @@ while True:
         break
     else:
         print("Opção inválida. Escolha 1 para adicionar a data de início do curso e criar ciclos ou 2 para sair.")
-
-print("\nPrograma encerrado.", "\n")
