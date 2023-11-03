@@ -6,11 +6,11 @@
 
 
 ## Sprint Backlog
-| TAREFAS | STATUS |
-| :-----------: | :-----: |
-| Criar uma página no perfil do aluno que liste todas as turmas em que ele está matriculado, exibindo informações relevantes, como nome da turma, data de início, data de término, nome do(s) professor(es) e notas dentro de cada turma. | 🚧 |
-| Criar uma função administrativa que permita aos administradores selecionar turmas específicas para fechar. | ✔️ |
-| Implemente uma funcionalidade de administração que permita aos administradores criar grupos dentro de turmas. | ✔️ |
+| User Story  | Benefícios  | Prioridade | Sprint  | Status |
+|:------------:|:----------:|:-----:|:--------:|:------:|
+| Como aluno, quero conseguir ver minhas informações durante o curso. | Para permitir que os alunos tenham um controle melhor de sua vida acadêmica. | 1 | Sprint 2 | 🚧 |
+| Como administrador, quero conseguir fechar as turmas. | Para garantir que os registros acadêmicos sejam precisos e que as turmas sejam arquivadas de maneira tratada após o término do curso. | 2 | Sprint 2 | ✔ | 
+| Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔ |
 
 
 ## Wireframes
