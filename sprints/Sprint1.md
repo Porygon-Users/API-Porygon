@@ -6,11 +6,11 @@
 <a href="##Wireframes">Wireframes</a> 
 </p>
 
-## Objetivo
+## 🎯 Objetivo
 <a name="Objetivo"></a>
 > A Sprint 1 é o ponto de partida para o nosso projeto, um cronograma dinâmico que irá rastrear e documentar o progresso das tarefas à medida que avançamos. Este espaço será preenchido com checklists e à medida que alcançamos marcos importantes, serão marcadas, permitindo-nos manter um registro claro e detalhado do nosso sucesso na realização de objetivos.
 
-## Sprint Backlog
+## ✅ Sprint Backlog
 | User Story  | Benefícios  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
 | Como administrador, quero criar um cadastro de alunos e professores. | Para permitir que alunos e professores acessem o sistema e utilizem seus recursos.| 3 | Sprint 1 | ✔️ |
