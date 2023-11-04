@@ -5,7 +5,7 @@
 > No âmbito educacional, professores e administradores colaboram para o sucesso dos alunos. Professores buscam avaliar, dar feedback e criar relatórios de desempenho, personalizando o ensino. Administradores necessitam dessas informações para decisões informadas. Na sprint 3, desenvolveremos um sistema para melhorar a colaboração dessas funções, tornando o ambiente de aprendizado mais eficaz com base em dados e decisões sólidas.
 
 
-##  Sprint Backlog
+## ✅ Sprint Backlog
 | User Story  | Benefícios  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 2 | Sprint 3 | ✔️  |  
