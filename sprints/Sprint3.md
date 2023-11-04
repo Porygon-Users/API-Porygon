@@ -1,7 +1,7 @@
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fee6819b-02ba-42da-b3f0-ba30363a1ff9)
 
 <p align = "center">
-<a href="##Objetivo">Objetivo</a>•
+<a href="##Objetivo">Objetivo</a> •
 <a href="##Sprint Backlog">Sprint Backlog</a> •
 <a href="##Wireframes">Wireframes</a> 
 </p>
