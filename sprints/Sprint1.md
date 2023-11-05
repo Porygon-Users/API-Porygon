@@ -24,14 +24,14 @@
 <a href="### Página para selecionar o tipo de cadastro">Página para selecionar o tipo de cadastro</a> •
 <a href="### Página de cadastro">Página de cadastro</a> •
 <a href="### Menu de configuração de turmas">Menu de configuração de turmas</a> •
-<a href="### Criação de turmas"Criação de turmas</a> •
-<a href="### Visualização de turmas">Visualização de turmas</a> 
+<a href="### Criação de turmas">Criação de turmas</a> •
+<a href="### Visualização de turmas">Visualização de turmas</a> •
 <a href="### Exclusão de turmas">Exclusão de turmas</a> •
 <a href="### Criação de grupos">Criação de grupos</a> •
 <a href="### Fechamneto de turmas">Fechamneto de turmas</a> •
 <a href="### Associação de alunos e professores nas turmas">Associação de alunos e professores nas turmas</a> •
 <a href="### Associação de professores">Associação de professores</a> •
-<a href="### Associação de alunos">Associação de alunos</a> 
+<a href="### Associação de alunos">Associação de alunos</a> •
 <a href="### Vizualização de alunos não alocados">Vizualização de alunos não alocados</a> •
 <a href="###Criação de grupos">Criação de grupos</a> 
 
