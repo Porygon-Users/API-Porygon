@@ -63,7 +63,6 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 2 | Sprint 3 | ✔️ | 
 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | ✔️ |  
 | Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe. | 2 | Sprint 4 | 🚧 | 
-|Como usuário, quero um menu que permita fazer o login escolhendo que tipo de usuário sou (aluno, professor ou administrador). | PPara que apareça minha tela de acordo com meu tipo de usuário. | 3 | Sprint 4 | 🚧 | 
 | Como aluno, quero que após meu login eu tenha a possibilidade de visualizar minha notas, ciclos e turmas. | Para que eu acompanhe meu desenvolvimento acadêmico. | 1 | Sprint 4 | 🚧 | 
 
 ## 📅 Cronograma
