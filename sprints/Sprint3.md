@@ -1,4 +1,4 @@
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/cab0ca41-4c40-49a9-a204-c4bc158bba6d)![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fee6819b-02ba-42da-b3f0-ba30363a1ff9)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/fee6819b-02ba-42da-b3f0-ba30363a1ff9)
 
 <p align = "center">
 <a href="##Objetivo">Objetivo</a> •
@@ -35,6 +35,7 @@ https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/c0fe506f-7c53-4ef5-8e81-4e90a84c8bc5)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/53427803-355f-4722-b584-d0dd15c01e22)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/0d0a557d-024a-4e69-bf09-cfae1e5512ed)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/cab0ca41-4c40-49a9-a204-c4bc158bba6d)
 
 ### Calcular médias
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/1ed5cb70-25a1-4276-907e-593bb4f7aaf2)
