@@ -108,3 +108,17 @@
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/9ec0fec6-cf1f-4035-addc-82ca7ac1a724)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/22f4cfba-b7ab-488c-ad99-fb455b95685e)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/dbfb9ed7-635f-4fc8-a93b-183de083b0aa)
+
+#### Criação de data do curso
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/3854aca2-61c0-4732-863e-9aed3bf9044e)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/706241b6-036b-404c-aea6-d93e7a7c8c9d)
+
+#### Criação de ciclos
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/9955512c-0cd9-4343-950d-ad6afa4758fd)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/6e20e01b-4af4-443b-8b07-f2edae8523c4)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/78b7dc40-8e57-49ab-9ce2-239346cd652d)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/4a325e2d-124a-469a-92cf-b616110f3034)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/75aa7f85-d666-4a22-8b50-c1ae7587ac5b)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/3b3330fd-0080-47ef-ba22-7d4ed6fdb8b7)
+![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/598aa1a3-f50f-4bea-98a1-3e966ca92cc4)
+
