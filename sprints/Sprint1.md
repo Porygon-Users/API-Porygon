@@ -1,3 +1,4 @@
+
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/711c347c-7a93-4a38-80ad-0cb60b199454)
 
 <p align = "center">
@@ -17,7 +18,12 @@
 | Como administrador, quero poder criar turmas e associar alunos e professores. | Para organizar as aulas e facilitar a gestão acadêmica. | 2 | Sprint 1 | ✔️ | 
 | Como administrador, quero definir o tempo total de curso e criar ciclos de entrega | Para definir o calendário acadêmico, incluindo datas de início e término do semestre. | 1 | Sprint 1 | ✔️ |
 
-## Wireframes
+## ⚙️ Funcionalidades
+
+### Criação de datas e ciclos
+https://github.com/Porygon-Users/API-Porygon/assets/145280630/311f0d9c-d8cd-4af7-bad6-4ecccb35dbad
+
+## 🖥️ Wireframes
 
 <p align = "center">
 <a href="### Página inicial">Página inicial</a> •
