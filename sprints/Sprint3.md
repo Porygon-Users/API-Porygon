@@ -21,6 +21,10 @@
 ### Atribuição de notas
 https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282-89ba-85c27c8b8810
 
+### Relatórios
+https://github.com/Porygon-Users/API-Porygon/assets/145280630/2fc32e39-2c54-49bb-af2e-1423dacb13fe
+
+
 ## 🖥️ Wireframes
 
 ### Menu de notas
@@ -41,6 +45,9 @@ https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/1ed5cb70-25a1-4276-907e-593bb4f7aaf2)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/830a20fa-0200-466f-940f-fdd01e66766d)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/46a8e4f6-ec33-4522-ab80-0ac2180f7987)
+
+
+
 
 
 
