@@ -39,7 +39,6 @@ https://github.com/Porygon-Users/API-Porygon/assets/145280630/2fc32e39-2c54-49bb
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/c0fe506f-7c53-4ef5-8e81-4e90a84c8bc5)
 ![Blue Modern Login Page Desktop Prototype](https://github.com/Porygon-Users/API-Porygon/assets/143560101/462ba3fc-d26c-4513-bc1c-ddeccfa65b60)
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/0d0a557d-024a-4e69-bf09-cfae1e5512ed)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/cab0ca41-4c40-49a9-a204-c4bc158bba6d)
 
 ### Calcular médias
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/1ed5cb70-25a1-4276-907e-593bb4f7aaf2)
