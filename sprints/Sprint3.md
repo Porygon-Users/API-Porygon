@@ -16,12 +16,12 @@
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 2 | Sprint 3 | ✔️  |  
 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | ✔️ |
 
-## 💻Funcionalidades
+## ⚙️ Funcionalidades
 
 ### Atribuição de notas
 https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282-89ba-85c27c8b8810
 
-## Wireframes
+## 🖥️ Wireframes
 
 ### Menu de notas
 ![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/9a9adaee-c3bd-4997-9410-f00a1d5dc18d)
