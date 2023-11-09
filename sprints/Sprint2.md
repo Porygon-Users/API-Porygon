@@ -3,7 +3,6 @@
 <p align = "center">
 <a href="##Objetivo">Objetivo</a> •
 <a href="## ✅ Sprint Backlog">Sprint Backlog</a> •
-<a href="##Wireframes">Wireframes</a> •
 <a href="## Funcionalidades" > Funcionalidades</a>
 </p>
 
