@@ -3,7 +3,7 @@
 <p align = "center">
 <a href="##Objetivo">Objetivo</a> •
 <a href="##Sprint Backlog">Sprint Backlog</a> •
-<a href="##Wireframes">Wireframes</a> 
+<a href="##Fncionalidades">Funcionalidades</a> 
 </p>
 
 ##  🎯 Objetivo
@@ -23,30 +23,4 @@ https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282
 
 ### Relatórios
 https://github.com/Porygon-Users/API-Porygon/assets/145280630/2fc32e39-2c54-49bb-af2e-1423dacb13fe
-
-
-## 🖥️ Wireframes
-
-### Menu de notas
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/9a9adaee-c3bd-4997-9410-f00a1d5dc18d)
-
-### Atribuir notas
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/19b401d9-03c9-4f89-8d90-2c174558f2cc)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/415cd366-1c09-4c9b-add6-6e10f562f7a9)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/4bf06ae6-953c-493f-8915-b6f1d8276284)
-
-### Atribuir pesos
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/c0fe506f-7c53-4ef5-8e81-4e90a84c8bc5)
-![Blue Modern Login Page Desktop Prototype](https://github.com/Porygon-Users/API-Porygon/assets/143560101/462ba3fc-d26c-4513-bc1c-ddeccfa65b60)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/0d0a557d-024a-4e69-bf09-cfae1e5512ed)
-
-### Calcular médias
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/1ed5cb70-25a1-4276-907e-593bb4f7aaf2)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/830a20fa-0200-466f-940f-fdd01e66766d)
-![image](https://github.com/Porygon-Users/API-Porygon/assets/145280630/46a8e4f6-ec33-4522-ab80-0ac2180f7987)
-
-
-
-
-
 
