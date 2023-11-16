@@ -7,13 +7,13 @@
 </p>
 
 ##  🎯 Objetivo
-> Nessa sprint 4 temos como objetivo fazer as devidas melhorias solicitadas pelo nosso cliente, para que possamos entregar um produto de qualidade e da forma que o cliente deseja.
+> Nessa sprint 4 temos como objetivo fazer as devidas melhorias solicitadas pelo nosso cliente, para que possamos entregar um produto de qualidade e da forma que o cliente deseja e permitir que o usuário consiga realizar a exportação de dados consolidados.
 
 
 ## ✅ Sprint Backlog
 | User Story  | Benefícios  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
-| Como administrador, quero aperfeiçoar e melhorar o SI. | Para que tenha uma melhor visibilidade e se torne o mais objetivo possível, dentro daquilo que já existe. | 2 | Sprint 4 | 🚧 | 
-| Como aluno, quero que após meu login eu tenha a possibilidade de visualizar minha notas, ciclos e turmas. | Para que eu acompanhe meu desenvolvimento acadêmico. | 1 | Sprint 4 | 🚧 | 
+| Como administrador, quero ter um menu com todas minhas funcionalidades listadas. | Para maior facilidade na utilização do programa. | 1 | Sprint 4 | 🚧 | 
+| Como administrador, quero tirar relatórios de cada turma.| Para exportação dos dados consolidados. | 2 | Sprint 4 | 🚧 | 
 
 ## ⚙️ Funcionalidades
