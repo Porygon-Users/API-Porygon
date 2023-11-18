@@ -6,9 +6,9 @@ import random
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
 # Construa o caminho completo para o arquivo Excel no diretório 'database'
-caminho_arquivo_excel = os.path.join(diretorio_atual, '..', 'database', 'infodados.xlsx')
+caminho_arquivo_excel = os.path.join(diretorio_atual,  'database', 'infodados.xlsx')
 
-# Abrir o arquivo Excel existente ou criar um novo
+# Abrir o arquivo Excel existente ou criar um novo'..',
 if os.path.exists(caminho_arquivo_excel):
     arquivo_excel = openpyxl.load_workbook(caminho_arquivo_excel)
 else:
