@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import openpyxl
 
 def obter_turmas(planilha_path):
     # Carrega a planilha
@@ -16,14 +17,11 @@ def obter_peso_ciclo(ciclo, df_pesos):
         peso_ciclo = df_pesos.loc[df_pesos['Ciclo'] == ciclo, 'Peso'].values[0]
         return peso_ciclo
     except IndexError:
-        # Se não encontrar um peso correspondente, retorna um valor padrão (0 neste caso)
+        # Se não encontrar um peso correspondente, emite um aviso e retorna 0
         print(f"Aviso: Não foram encontrados pesos para o {ciclo} na aba 'Pesos'.")
         return 0
 
 def gerar_relatorio_turmas(planilha_path, df_pesos):
-    # Caminho para o diretório do script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-
     # Obtém as turmas disponíveis
     turmas = obter_turmas(planilha_path)
 
@@ -49,7 +47,7 @@ def gerar_relatorio_turmas(planilha_path, df_pesos):
     df_turma = pd.read_excel(planilha_path, sheet_name=turma_selecionada)
 
     # Cria um DataFrame vazio para o relatório consolidado
-    df_relatorio = pd.DataFrame(columns=['Aluno', 'Início do curso', 'Término do curso'])
+    df_relatorio = pd.DataFrame(columns=['Aluno', 'Início do curso', 'Término do curso', 'Pesos', 'Média'])
 
     # Adiciona as informações do relatório para cada aluno
     for index, row in df_turma.iterrows():
@@ -62,6 +60,8 @@ def gerar_relatorio_turmas(planilha_path, df_pesos):
             'Aluno': [aluno],
             'Início do curso': [inicio_curso],
             'Término do curso': [fim_curso],
+            'Pesos': [0],  # Inicializa com 0, será atualizado posteriormente
+            'Média': [row['Média']],  # Adiciona a média
         })], ignore_index=True)
 
         # Itera pelos ciclos presentes na turma
@@ -75,18 +75,22 @@ def gerar_relatorio_turmas(planilha_path, df_pesos):
                     # Adiciona uma nova coluna para o ciclo
                     df_relatorio[ciclo] = None
 
-                    # Adiciona o peso ao DataFrame do relatório
-                    peso_ciclo = obter_peso_ciclo(ciclo, df_pesos)
-                    df_relatorio.loc[df_relatorio['Aluno'] == aluno, ciclo] = peso_ciclo
-
                 # Adiciona a nota ao DataFrame do relatório
                 df_relatorio.loc[df_relatorio['Aluno'] == aluno, ciclo] = nota
 
-    # Reorganiza as colunas para ter 'Aluno', 'Início do curso', 'Término do curso' no início
-    df_relatorio = df_relatorio[['Aluno', 'Início do curso', 'Término do curso'] + sorted(df_relatorio.columns[3:])]
+                # Atualiza o valor de 'Pesos' para o ciclo
+                peso_ciclo = obter_peso_ciclo(ciclo, df_pesos)
+                df_relatorio.loc[df_relatorio['Aluno'] == aluno, 'Pesos'] = peso_ciclo
+
+    # Atualiza o valor de 'Pesos' para todos os alunos no DataFrame do relatório
+    df_relatorio['Pesos'] = df_pesos['Peso'].values
+
+    # Reorganiza as colunas para ter 'Aluno', 'Início do curso', 'Término do curso', 'Pesos', 'Média' no início
+    colunas_organizadas = ['Aluno', 'Início do curso', 'Término do curso', 'Pesos', 'Média'] + sorted(df_relatorio.columns[5:])
+    df_relatorio = df_relatorio[colunas_organizadas]
 
     # Caminho para o novo arquivo Excel (na pasta 'database')
-    novo_arquivo_path = os.path.join(script_dir, '..', 'database', f'relatorio_de_turmas.xlsx')
+    novo_arquivo_path = os.path.join('..', 'database', f'relatorio_de_turmas.xlsx')
 
     # Adiciona o DataFrame do relatório ao novo arquivo
     with pd.ExcelWriter(novo_arquivo_path, engine='openpyxl') as writer:
@@ -113,5 +117,3 @@ if __name__ == "__main__":
 
     # Chama a função para gerar relatórios de turmas, passando o DataFrame de pesos
     gerar_relatorio_turmas(caminho_planilha, df_pesos)
-
-
