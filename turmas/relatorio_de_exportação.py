@@ -114,23 +114,3 @@ if __name__ == "__main__":
 
     # Chama a função para gerar relatórios de turmas, passando o DataFrame de pesos
     gerar_relatorio_turmas(caminho_planilha, df_pesos)
-
-
-=======
-import pandas as pd
-import openpyxl as openpy
-
-#Depois de ter definido todas as coisas necessárias
-print("Você deseja:\n 1- Emitir um relatório\n2- Sair")
-op = int(input("Insira a opção desejada: "))
-
-while True:
-    if op == 2:
-        break
-    elif op == 1:
-        #Inserir lista de turmas disponíveis para a seleção
-        #Solicitar o número da turma desejada
-        turma = input("Informe a turma desejada para o relatório: ")
-    else:
-        print("Insira uma opção válida.")
->>>>>>> eb4db79e417eedb827e040758fe46b0a43037865
