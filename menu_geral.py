@@ -40,10 +40,13 @@ def gerenciar_alunos():
         if turma_nome in planilha.sheetnames:
             aba_turma = planilha[turma_nome]
             alunos_na_turma = []
+
             for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=3):
-                nome = row[0].value
-                cpf = row[1].value
-                alunos_na_turma.append((nome, cpf))
+                nome = row[1].value
+                if nome and "(professor)" not in nome:
+                    cpf = row[0].value
+                    alunos_na_turma.append((cpf, nome))
+
             return alunos_na_turma
         else:
             return None
@@ -78,7 +81,6 @@ def gerenciar_alunos():
         escolha = input("Escolha uma das opções: ")
 
         if escolha == '1':
-            # Listar as abas de turma disponíveis (apenas as abertas)
             abas_turmas = [sheet for sheet in book.sheetnames if sheet.startswith('Turma ')]
 
             if not abas_turmas:
@@ -89,15 +91,13 @@ def gerenciar_alunos():
                     if "(fechada)" not in turma:
                         print(f"{i}. {turma.replace('(fechada)', '')}")
 
-                # Pergunta ao usuário em qual turma deseja adicionar os alunos
                 try:
                     indice_turma = int(input("Digite o número da turma que deseja adicionar os alunos: ")) - 1
 
                     if 0 <= indice_turma < len(abas_turmas) and "(fechada)" not in abas_turmas[indice_turma]:
                         turma_desejada = abas_turmas[indice_turma]
-                        quantidade_alunos = int(input("Quantos alunos deseja adicionar: "))
+                        quantidade_alunos = int(input("Quantos alunos deseja adicionar:"))
 
-                        # Verificar alunos na aba "Alunos" que não foram colocados em nenhuma turma
                         aba_alunos = book['Cadastro']
                         alunos_disponiveis = []
 
@@ -110,31 +110,25 @@ def gerenciar_alunos():
                             if not aluno_em_turma(book, aluno_chave, turma_desejada) and funcao == "aluno":
                                 alunos_disponiveis.append((nome, cpf, row[2].value))
 
-                        # Selecionar a quantidade desejada de alunos disponíveis
-                        alunos_selecionados = alunos_disponiveis[:quantidade_alunos]
-
-                        # Adicionar os alunos selecionados à turma na próxima linha disponível
-                        aba_turma = book[turma_desejada]
-
-                        # Obter a última linha utilizada para a turma ou usar 1 se for a primeira vez
                         ultima_linha = ultima_linha_por_grupo.get(turma_desejada, 1)
 
-                        for i, aluno in enumerate(alunos_selecionados, start=1):
-                            nome, cpf, email = aluno
+                        # Encontrar a próxima linha vazia ou com "None" nas colunas relevantes na turma
+                        aba_turma = book[turma_desejada]  # Definir aba_turma aqui
+                        while True:
+                            if any(aba_turma.cell(row=ultima_linha, column=col).value is None for col in [1, 2]):
+                                break
+                            ultima_linha += 1
 
-                            # Calcular a próxima linha na turma
+                        for i, aluno in enumerate(alunos_disponiveis[:quantidade_alunos], start=1):
+                            nome, cpf, email = aluno
                             proxima_linha = ultima_linha + i
 
-                            # Adicionar os dados à próxima linha na turma
-                            aba_turma.cell(row=proxima_linha, column=1, value=nome)  # Adiciona o nome na coluna "ID"
-                            aba_turma.cell(row=proxima_linha, column=2, value=cpf)   # Adiciona o CPF na coluna "NOME"
+                            aba_turma.cell(row=proxima_linha-1, column=1, value=nome)
+                            aba_turma.cell(row=proxima_linha-1, column=2, value=cpf)
 
-                        # Atualizar a última linha utilizada para a turma
                         ultima_linha_por_grupo[turma_desejada] = proxima_linha
 
                         print(f"\nAlunos adicionados à {turma_desejada} com sucesso.")
-
-                        alunos_adicionados.add(aluno)
 
                     else:
                         print("\nTurma não encontrada ou está fechada.")
@@ -168,7 +162,7 @@ def gerenciar_alunos():
                 print(f"\nAlunos na {turma_escolhida}:")
                 for i, aluno in enumerate(alunos_na_turma, start=1):
                     nome, cpf = aluno
-                    print(f"{i}. {nome} (CPF: {cpf})")
+                    print(f"{i}. {cpf} (ID: {nome})")
 
                 escolha_aluno = input("\nDigite o número do aluno que deseja remover: ")
 
@@ -208,6 +202,33 @@ def gerenciar_alunos():
     # Salve as alterações no arquivo Excel
     book.save(caminho_arquivo_excel)
 def gerenciar_professores():
+    def adicionar_professor_a_turma(planilha, turma_destino, professor_nome, professor_cpf):
+        aba_turma = planilha[turma_destino]
+
+        # Verificar se já existe um professor na turma
+        for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=2):
+            nome = row[0].value
+            cpf = row[1].value
+            if "(professor)" in cpf:
+                print(f"Já existe um professor na {turma_destino}. Não é possível adicionar mais um.")
+                return
+
+        # Encontrar a primeira linha vazia após os cabeçalhos "Nome" e "CPF"
+        primeira_linha_vazia = 2  # Começando na linha 2 para evitar os cabeçalhos
+
+        for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=2):
+            if row[0].value is None or row[1].value is None:
+                break
+            primeira_linha_vazia += 1
+
+        # Agora, você pode adicionar os dados do professor na primeira linha vazia
+        aba_turma.cell(row=primeira_linha_vazia, column=1).value = professor_nome
+        aba_turma.cell(row=primeira_linha_vazia, column=2).value = (f"{professor_cpf} (professor)")
+
+        # Salvar o livro após adicionar o professor
+        planilha.save(caminho_arquivo_excel)
+        return True
+
     # Função para verificar se um professor já está alocado em uma turma
     def professor_em_turma(planilha, professor_chave):
         abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
@@ -224,15 +245,31 @@ def gerenciar_professores():
 
         return None
 
+    def professor_em_turma_global(planilha, professor_chave):
+        abas_turmas = [sheet for sheet in planilha.sheetnames if sheet.startswith('Turma ')]
+
+        for turma in abas_turmas:
+            aba_turma = planilha[turma]
+            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=3):
+                nome = row[0].value
+                cpf = row[1].value
+                professor_turma_chave = (nome, cpf)
+
+                if professor_turma_chave == professor_chave:
+                    return turma  # Retorna o nome da turma onde o aluno está
+
+        return None
+
     # Função para listar os professores em uma turma
     def listar_professores_na_turma(planilha, turma_nome):
         if turma_nome in planilha.sheetnames:
             aba_turma = planilha[turma_nome]
             professores_na_turma = []
-            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=4, max_col=5):
-                nome = row[0].value
-                cpf = row[1].value
-                professores_na_turma.append((nome, cpf))
+            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=3):
+                nome = row[1].value
+                if nome and "(professor)" in nome:
+                    cpf = row[0].value
+                    professores_na_turma.append((cpf, nome))
             return professores_na_turma
         else:
             return None
@@ -267,7 +304,6 @@ def gerenciar_professores():
 
                     if 0 <= indice_turma < len(abas_turmas) and "(fechada)" not in abas_turmas[indice_turma]:
                         turma_desejada = abas_turmas[indice_turma]
-                        quantidade_professores = int(input("Quantos professores deseja adicionar: "))
 
                         # Verificar professores na aba "Cadastro" que não foram colocados em nenhuma turma
                         aba_professores = book['Cadastro']
@@ -282,36 +318,29 @@ def gerenciar_professores():
                             if not professor_em_turma(book, professor_chave) and funcao == "professor":
                                 professores_disponiveis.append((nome, cpf))
 
-                        # Selecionar a quantidade desejada de professores disponíveis
-                        professores_selecionados = professores_disponiveis[:quantidade_professores]
+                        # Listar os professores disponíveis
+                        print("\nProfessores disponíveis:")
+                        for i, professor in enumerate(professores_disponiveis, start=1):
+                            nome, cpf = professor
+                            print(f"{i}. {cpf} (ID: {nome})")
 
-                        # Função para adicionar um professor a uma turma específica
-                        def adicionar_professor_a_turma(planilha, turma_destino, professor_nome, professor_cpf):
-                            aba_turma = planilha[turma_destino]
-
-                            # Encontrar a primeira linha vazia após os cabeçalhos "Nome" e "CPF"
-                            primeira_linha_vazia = 2  # Começando na linha 2 para evitar os cabeçalhos
-
-                            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=2):
-                                if row[0].value is None or row[1].value is None:
-                                    break
-                                primeira_linha_vazia += 1
-
-                            # Agora, você pode adicionar os dados do professor na primeira linha vazia
-                            aba_turma.cell(row=primeira_linha_vazia, column=1).value = professor_nome
-                            aba_turma.cell(row=primeira_linha_vazia, column=2).value = (f"{professor_cpf} (professor)")
-
-                            # Salvar o livro após adicionar o professor
-                            planilha.save(caminho_arquivo_excel)
-
+                        # Perguntar quais professores adicionar
+                        escolha_professores = input("\nDigite o número do professor que deseja adicionar: ")
+                        indices_professores = [int(index.strip()) for index in escolha_professores.split(',')]
 
                         # Adicionar os professores selecionados à turma
                         aba_turma = book[turma_desejada]
-                        for professor in professores_selecionados:
-                            nome, cpf = professor
-                            adicionar_professor_a_turma(book, turma_desejada, nome, cpf)
-                            print(f"Professor {nome} adicionado à {turma_desejada} com sucesso.")
-                            professores_adicionados.add(professor)
+                        for indice_professor in indices_professores:
+                            if 1 <= indice_professor <= len(professores_disponiveis):
+                                professor = professores_disponiveis[indice_professor - 1]
+                                nome, cpf = professor
+                                if adicionar_professor_a_turma(book, turma_desejada, nome, cpf):
+                                    print(f"Professor {cpf} adicionado à {turma_desejada} com sucesso.")
+                                else:
+                                    pass
+                                professores_adicionados.add(professor)
+                            else:
+                                print(f"Índice {indice_professor} inválido.")
 
                     else:
                         print("\nTurma não encontrada ou está fechada.")
@@ -342,10 +371,10 @@ def gerenciar_professores():
             professores_na_turma = listar_professores_na_turma(book, turma_escolhida)
 
             if professores_na_turma:
-                print(f"Professores na turma {turma_escolhida}:")
+                print(f"\nProfessor na {turma_escolhida}:")
                 for i, professor in enumerate(professores_na_turma, start=1):
                     nome, cpf = professor
-                    print(f"{i}. {nome} (CPF: {cpf})")
+                    print(f"{i}. {cpf}")
 
                 escolha_professor = input("\nDigite o número do professor que deseja remover: ")
 
@@ -355,15 +384,15 @@ def gerenciar_professores():
                         professor_remover = professores_na_turma[escolha_professor - 1]
                         nome_professor, cpf_professor = professor_remover
 
-                        turma_do_professor = professor_em_turma(book, (nome_professor, cpf_professor))
+                        turma_do_professor = professor_em_turma_global(book, (nome_professor, cpf_professor))
                         if turma_do_professor:
                             aba_turma = book[turma_do_professor]
-                            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=4, max_col=5):
+                            for row in aba_turma.iter_rows(min_row=2, max_row=aba_turma.max_row, min_col=1, max_col=3):
                                 nome = row[0].value
                                 cpf = row[1].value
                                 if (nome, cpf) == (nome_professor, cpf_professor):
                                     aba_turma.delete_rows(row[0].row)
-                                    print(f"Professor {nome_professor} removido da {turma_do_professor}.")
+                                    print(f"{cpf_professor} removido da {turma_do_professor}.")
                                     break
                         else:
                             print("Professor não encontrado em nenhuma turma.")
@@ -628,7 +657,7 @@ def turmas():
         for turma_nome in turmas_a_excluir:
             if turma_nome in book.sheetnames:
                 book.remove(book[turma_nome])
-                print(f"\nTurma {turma_nome} excluída com sucesso.")
+                print(f"\n{turma_nome} excluída com sucesso.")
             else:
                 print(f"\nA turma {turma_nome} não foi encontrada.")
         book.save(caminho_arquivo_excel)
@@ -785,9 +814,69 @@ def gerenciar_notas():
             print("\nEscolha de turma inválida.")
     except ValueError:
         print("\nEscolha de turma inválida.")
+    #Encontrar a última coluna de notas
+    ultima_coluna_nota = coluna_nota + 1  # A última coluna onde uma nota foi adicionada
 
+    #Adicionar título da coluna "MÉDIAS" na célula correspondente
+    aba_turma_notas.cell(row=1, column=ultima_coluna_nota + 1).value = "MÉDIAS"
+
+    #Calcular as médias ponderadas e adicionar na coluna "MÉDIAS"
+    for aluno, linha in dict_linhas_alunos.items():
+        soma_notas_ponderadas = 0
+        soma_pesos = 0
+
+        # Calcular a média ponderada para cada ciclo
+        for i, coluna_ciclo in enumerate(colunas_ciclos):
+            peso_ciclo = aba_turma_notas.cell(row=2, column=coluna_ciclo.col_idx + qtd_ciclos).value
+            nota_ciclo = aba_turma_notas.cell(row=linha, column=coluna_ciclo.col_idx + qtd_ciclos * 2).value
+
+            # Certifique-se de que peso_ciclo seja tratado como um número
+            peso_ciclo = float(peso_ciclo) if peso_ciclo is not None else 0.0
+
+            if nota_ciclo is not None:
+                soma_notas_ponderadas += peso_ciclo * float(nota_ciclo)
+                soma_pesos += peso_ciclo
+
+        # Calcular a média ponderada total
+        if soma_pesos != 0:
+            media_ponderada1 = soma_notas_ponderadas / soma_pesos
+            media_ponderada = round(media_ponderada1, 2)
+            aba_turma_notas.cell(row=linha, column=ultima_coluna_nota + 1).value = media_ponderada
     book.save(caminho_arquivo_excel)
+def listar_medias(book):
+    #Obter todas as turmas disponíveis
+    turmas = [turma for turma in book.sheetnames if "Turma" in turma]
 
+    #Imprimir as turmas disponíveis e pedir ao usuário para entrar com o número da turma
+    print("\nTurmas disponíveis:")
+    for i, turma in enumerate(turmas, start=1):
+        print(f"{i}. {turma}")
+    turma_selecionada = turmas[int(input("\nEntre com o número da turma: ")) - 1]
+
+    #Selecionar a aba correspondente à turma selecionada pelo usuário
+    sheet = book[turma_selecionada]
+
+    #Inicializar a lista de médias
+    lista_medias = []
+
+    #Identificar a coluna "MÉDIAS"
+    for cell in sheet[1]:
+        if cell.value == "MÉDIAS":
+            coluna_medias = cell.column
+
+    #Percorrer cada linha da aba selecionada
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        print()
+        #Verificar se a célula da coluna "MÉDIAS" está vazia
+        if row[coluna_medias - 1] is None:
+            #Adicionar à lista_medias uma string formatada com o ID do aluno, nome e "Média ainda não calculada"
+            lista_medias.append(f"ID: {row[0]} - {row[1]}: notas não atribuídas")
+        else:
+            #Adicionar à lista_medias uma string formatada com o ID do aluno, nome e média
+            lista_medias.append(f"ID: {row[0]} - {row[1]}: {row[coluna_medias - 1]}")
+
+    # Retornar lista_medias
+    return lista_medias
 
 #Menu
 while True:
@@ -826,14 +915,14 @@ while True:
                     break
             elif escolha == 4:
                 print("\n\nOpções:")
-                print("\n1. Gerenciar notas")
-                print("2. Calcular médias")
+                print("\n1. Atribuir notas")
+                print("2. Visualizar médias")
                 print("9. Voltar", "\n")
                 escolha4 = input("Escolha uma das opções: ")
                 if escolha4 == '1':
                     gerenciar_notas()
                 elif escolha4 == '2':
-                    print("Em desenvolvimento")
+                    print('\n'.join(listar_medias(book)))
                 elif escolha4 == '9':
                     book.save(caminho_arquivo_excel)
                     break
