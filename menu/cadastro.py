@@ -82,7 +82,7 @@ while True:
     opcao = input("Opção: ")
 
     if opcao == '9':
-        print("\nDados atualizados com sucesso, encerrando o programa. Até logo!", "\n")
+        print("\nCadastro Feito com Sucesso, Até logo!", "\n")
         break
     elif opcao in ['1', '2']:
         funcao = 'aluno' if opcao == '1' else 'professor'
