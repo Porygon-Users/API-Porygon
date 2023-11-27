@@ -13,7 +13,14 @@
 ## ✅ Sprint Backlog
 | User Story  | Benefícios  | Prioridade | Sprint  | Status |
 |:------------:|:----------:|:-----:|:--------:|:------:|
-| Como administrador, quero ter um menu com todas minhas funcionalidades listadas. | Para maior facilidade na utilização do programa. | 1 | Sprint 4 | 🚧 | 
-| Como administrador, quero tirar relatórios de cada turma.| Para exportação dos dados consolidados. | 2 | Sprint 4 | 🚧 | 
+| Como administrador, quero ter um menu com todas minhas funcionalidades listadas. | Para maior facilidade na utilização do programa. | 1 | Sprint 4 | ✔️ | 
+| Como administrador, quero tirar relatórios de cada turma.| Para exportação dos dados consolidados. | 2 | Sprint 4 | ✔️ | 
 
 ## ⚙️ Funcionalidades
+### Menu Principal
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/a91a1b7f-78f9-48a1-8080-be3d79dab1d5
+
+
+### Relatórios
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/ba60c7e0-4197-45a0-bc0c-5467bc3d1373
+
