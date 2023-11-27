@@ -62,8 +62,8 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 | Como administrador, quero criar grupos dentro da sala de aula. | Para permitir que os administradores criem grupos de alunos dentro das turmas. | 3 | Sprint 2 | ✔️ |  
 | Como professor, quero conseguir atribuir scores e feedbacks para os alunos. | Para que os alunos recebam feedback construtivo e saibam como estão se saindo nas avaliações. | 2 | Sprint 3 | ✔️ | 
 | Como administrador, quero conseguir tirar uma lista dos alunos e suas informações durante o curso. | Para que os relatórios possam ser gerados a partir dos dados dos alunos, auxiliando na tomada de decisões educacionais. | 1 |Sprint 3 | ✔️ |  
-| Como administrador, quero ter um menu com todas minhas funcionalidades listadas. | Para maior facilidade na utilização do programa. | 1 | Sprint 4 | 🚧 | 
-| Como administrador, quero tirar relatórios de cada turma.| Para exportação dos dados consolidados. | 2 | Sprint 4 | 🚧 | 
+| Como administrador, quero ter um menu com todas minhas funcionalidades listadas. | Para maior facilidade na utilização do programa. | 1 | Sprint 4 | ✔️ | 
+| Como administrador, quero tirar relatórios de cada turma.| Para exportação dos dados consolidados. | 2 | Sprint 4 | ✔️ | 
 
 ## 📅 Cronograma
 <a name="Cronograma"></a>
@@ -72,7 +72,7 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 | [Sprint 1](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint1.md)|  04/09/23 | 24/09/23 | ✔️ |
 | [Sprint 2](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint2.md) | 25/09/23 | 15/10/23 | ✔️ |
 | [Sprint 3](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint3.md) | 16/10/23 | 05/11/23 | ✔️ |
-| [Sprint 4](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint4.md) | 06/11/23 | 26/11/23 | 🚧 |
+| [Sprint 4](https://github.com/Porygon-Users/API-Porygon/blob/main/sprints/Sprint4.md) | 06/11/23 | 26/11/23 | ✔️ |
 
 
 ## 🔧 Ferramentas Utilizadas
