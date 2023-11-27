@@ -1,85 +1,155 @@
-import streamlit as st
+import os
 import pandas as pd
-import plotly.express as px
+from openpyxl import load_workbook
 
+def obter_caminho_para_planilha(nome_planilha):
+    # Obtém o diretório atual
+    diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
-# Função para carregar os dados do arquivo Excel
-def carregar_dados_excel():
-    excel_file = pd.ExcelFile("infodados.xlsx")
-    sheet_names = excel_file.sheet_names
-    return excel_file, sheet_names
+    # Constrói o caminho completo para o arquivo Excel no diretório 'database'
+    caminho_arquivo_excel = os.path.join(diretorio_atual, '..', 'database', f'{nome_planilha}.xlsx')
 
-# Função para filtrar as planilhas de turma
-def filtrar_planilhas_turma(excel_file, sheet_names):
-    keywords = ["turma", "classe", "grupo"]
-    turma_sheets = [sheet_name for sheet_name in sheet_names if any(keyword in sheet_name.lower() for keyword in keywords) and "fechada" not in sheet_name.lower()]
-    return turma_sheets
+    return caminho_arquivo_excel
+def listar_turmas_disponiveis(planilha_origem):
+    # Obtém todas as abas da planilha de origem
+    abas = planilha_origem.sheet_names
 
-# Função para selecionar a planilha de turma
-def selecionar_planilha_turma(turma_sheets):
-    selected_sheet = st.sidebar.selectbox("Selecione a turma:", turma_sheets)
-    return selected_sheet
+    # Filtra apenas as abas que contêm a palavra-chave "Turma"
+    turmas_disponiveis = [turma for turma in abas if "Turma" in turma]
 
-# Função para aplicar o filtro de alunos
-def aplicar_filtro_alunos(df_turma):
-    alunos_unicos = df_turma["Alunos"].unique()
-    
-    # Add a "Select All" button
-    select_all_button = st.sidebar.checkbox("Todos os alunos")
-    
-    if select_all_button:
-        selected_alunos = alunos_unicos
+    return turmas_disponiveis
+def listar_relatorios_disponiveis(planilha_destino):
+    # Obtém todas as abas da planilha de destino
+    abas = planilha_destino.sheet_names
+
+    # Filtra apenas as abas que contêm a palavra-chave "Relatório"
+    relatorios_disponiveis = [relatorio for relatorio in abas if "Relatório" in relatorio]
+
+    return relatorios_disponiveis
+def ler_planilha(nome_planilha):
+    caminho_arquivo_excel = obter_caminho_para_planilha(nome_planilha)
+
+    # Verifica se o arquivo Excel existe
+    if os.path.exists(caminho_arquivo_excel):
+        return pd.read_excel(caminho_arquivo_excel)
     else:
-        # Use multiselect if the "Selecionar Todos" checkbox is not selected
-        selected_alunos = st.sidebar.multiselect("Selecione os alunos:", alunos_unicos)
-    
-    return selected_alunos
+        # Cria um DataFrame vazio se o arquivo não existir
+        return pd.DataFrame()
+def salvar_planilha(nome_planilha, dados, turma_escolhida):
+    caminho_arquivo_excel = obter_caminho_para_planilha(nome_planilha)
 
+    # Salva os dados na planilha e cria uma aba com o nome "Relatório Turma X"
+    with pd.ExcelWriter(caminho_arquivo_excel, engine='openpyxl', mode='a') as writer:
+        # Se a aba já existe, exclua-a antes de salvar
+        if turma_escolhida in writer.book.sheetnames:
+            writer.book.remove(writer.book[turma_escolhida])
 
+        # Salva os dados na nova aba
+        dados.to_excel(writer, sheet_name=turma_escolhida, index=False)
+        # Renomeia a aba recém-criada
+        writer.book[turma_escolhida].title = f"Relatório {turma_escolhida}"
+def excluir_relatorio(nome_planilha, turma_escolhida):
+    caminho_arquivo_excel = obter_caminho_para_planilha(nome_planilha)
 
-# Função para filtrar o DataFrame com base nos alunos e ciclo selecionados
-def filtrar_dataframe(df_turma, alunos_selecionados, selected_ciclo):
-    df_selecao = df_turma[df_turma["Alunos"].isin(alunos_selecionados)][["Alunos", selected_ciclo, "Média", "Professores", "Início do Curso", "Fim do Curso"]]
-    return df_selecao
+    # Exclui a aba correspondente à turma
+    with pd.ExcelWriter(caminho_arquivo_excel, engine='openpyxl', mode='a') as writer:
+        if turma_escolhida in writer.book.sheetnames:
+            writer.book.remove(writer.book[turma_escolhida])
+            print(f"Relatório da turma '{turma_escolhida}' excluído com sucesso!")
+        else:
+            print(f"Relatório da turma '{turma_escolhida}' não encontrado.")
+def visualizar_relatorios(nome_planilha):
+    caminho_arquivo_excel = obter_caminho_para_planilha(nome_planilha)
+    planilha_destino = pd.ExcelFile(caminho_arquivo_excel)
 
-# Função para criar gráficos
-def criar_graficos(df_selecao, selected_ciclo):
-    col1, col2 = st.columns(2)
-    
-    nota_por_aluno = px.bar(df_selecao, x="Alunos", y=selected_ciclo, title=f"Nota do {selected_ciclo} por aluno")
-    col1.plotly_chart(nota_por_aluno)
+    # Exibe as abas disponíveis na planilha de destino
+    print("\nRelatórios existentes:")
+    relatorios_disponiveis = listar_relatorios_disponiveis(planilha_destino)
+    if relatorios_disponiveis:
+        for relatorio in relatorios_disponiveis:
+            print(f"{relatorio}")
+    else:
+        print("Nenhum relatório encontrado.")
+def main():
+    while True:
+        # Exibe o menu principal
+        print("\nMenu Principal:")
+        print("1. Gerar Relatório")
+        print("2. Excluir Relatório")
+        print("3. Visualizar Relatórios")
+        print("4. Sair")
 
-    media_por_aluno = px.bar(df_selecao, x="Alunos", y="Média", title="Média por aluno")
-    col2.plotly_chart(media_por_aluno)
+        # Solicita ao usuário para escolher uma opção
+        opcao = input("Escolha uma opção: ")
 
-# Configurações da página
-st.set_page_config(layout="wide", page_title="Relatórios gerais", page_icon=":bar_chart:")
-st.sidebar.image("pbltex.jpg", caption="Análise de dados")
-st.title("Relatório das Turmas")
+        if opcao == '1':
+            # Lista todas as turmas disponíveis
+            turmas_disponiveis = listar_turmas_disponiveis(planilha_origem)
+            print("\nTurmas disponíveis:")
+            for i, turma in enumerate(turmas_disponiveis, start=1):
+                print(f"{i}. {turma}")
 
-# Carregar os dados do arquivo Excel
-excel_file, sheet_names = carregar_dados_excel()
+            # Solicita ao usuário para escolher uma turma
+            escolha_turma = input("\nDigite o número da turma que deseja adicionar ao relatório (ou 'sair' para sair): ")
 
-# Filtrar as planilhas de turma
-turma_sheets = filtrar_planilhas_turma(excel_file, sheet_names)
+            if escolha_turma.lower() == 'sair':
+                continue
 
-# Selecionar a planilha de turma
-selected_sheet = selecionar_planilha_turma(turma_sheets)
+            try:
+                escolha_turma = int(escolha_turma)
+                turma_escolhida = turmas_disponiveis[escolha_turma - 1]
 
-# Ler os dados da planilha selecionada
-df_turma = pd.read_excel("infodados.xlsx", sheet_name=selected_sheet)
+                # Lê os dados da turma escolhida na planilha de origem
+                dados_turma = planilha_origem.parse(turma_escolhida)
 
-# Adicionar um seletor de ciclo
-colunas_ciclo = [coluna for coluna in df_turma.columns if coluna.lower().startswith("ciclo")]
-selected_ciclo = st.sidebar.selectbox("Selecione o ciclo:", colunas_ciclo)
+                # Salva os dados da turma na planilha de destino
+                salvar_planilha('relatorio_de_exportacao', dados_turma, turma_escolhida)
 
-# Aplicar o filtro de alunos
-alunos_selecionados = aplicar_filtro_alunos(df_turma)
+                # Informa que a turma foi adicionada com sucesso
+                print(f"\n'{turma_escolhida}' adicionada ao relatório com sucesso!")
 
-# Filtrar o DataFrame com base nos alunos e ciclo selecionados
-df_selecao = filtrar_dataframe(df_turma, alunos_selecionados, selected_ciclo)
+            except (ValueError, IndexError):
+                print("Escolha inválida. Por favor, digite um número de turma válido.")
+                continue
 
-# Criar gráficos
-criar_graficos(df_selecao, selected_ciclo)
+        elif opcao == '2':
+            # Lista todos os relatórios disponíveis para exclusão
+            relatorios_disponiveis = listar_relatorios_disponiveis(planilha_destino)
+            print("\nRelatórios disponíveis para exclusão:")
+            for i, relatorio in enumerate(relatorios_disponiveis, start=1):
+                print(f"{i}. {relatorio}")
 
-st.dataframe(df_selecao)
+            # Solicita ao usuário para escolher um relatório para excluir
+            escolha_relatorio_excluir = input("\nDigite o número do relatório que deseja excluir (ou 'voltar' para voltar): ")
+
+            if escolha_relatorio_excluir.lower() == 'voltar':
+                continue
+
+            try:
+                escolha_relatorio_excluir = int(escolha_relatorio_excluir)
+                relatorio_excluir = relatorios_disponiveis[escolha_relatorio_excluir - 1]
+
+                # Exclui o relatório escolhido
+                excluir_relatorio('relatorio_de_exportacao', relatorio_excluir)
+
+            except (ValueError, IndexError):
+                print("Escolha inválida. Por favor, digite um número de relatório válido.")
+                continue
+
+        elif opcao == '3':
+            # Visualiza os relatórios existentes
+            visualizar_relatorios('relatorio_de_exportacao')
+
+        elif opcao == '4':
+            print("Saindo do programa. Até mais!")
+            break
+
+        else:
+            print("Opção inválida. Por favor, escolha uma opção válida.")
+if __name__ == "__main__":
+    # Lê as planilhas de origem e destino
+    planilha_origem = pd.ExcelFile(obter_caminho_para_planilha('infodados'))
+    planilha_destino = pd.ExcelFile(obter_caminho_para_planilha('relatorio_de_exportacao'))
+
+    # Inicia o programa principal
+    main()

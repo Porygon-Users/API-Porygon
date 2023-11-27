@@ -23,12 +23,10 @@ cabecalho_alinhamento = Alignment(horizontal='center')
 
 # Adicione cabeçalhos se a planilha for nova
 if not os.path.exists("infodados.xlsx"):
-    planilha['A1'] = "NOME"
-    planilha['B1'] = "CPF"
-    planilha['C1'] = "E-MAIL"
+    planilha['A1'] = "ID"
+    planilha['B1'] = "NOME"
+    planilha['C1'] = "CPF"
     planilha['D1'] = "FUNÇÃO"
-    planilha['E1'] = "LOGIN"
-    planilha['F1'] = "SENHA"
 
     # Aplicar estilos ao cabeçalho
     for cell in planilha['1:1']:
@@ -40,8 +38,6 @@ if not os.path.exists("infodados.xlsx"):
     planilha.column_dimensions['B'].width = 20
     planilha.column_dimensions['C'].width = 25
     planilha.column_dimensions['D'].width = 20
-    planilha.column_dimensions['E'].width = 20
-    planilha.column_dimensions['F'].width = 20
 
 # Salve o arquivo Excel com o caminho completo
 arquivo_excel.save(caminho_arquivo)
