@@ -73,14 +73,16 @@ def visualizar_relatorios(nome_planilha):
 def main():
     while True:
         # Exibe o menu principal
-        print("\nMenu Principal:")
+        print("\n==----------------------------==")
+        print("=-----------M E N U------------=")
+        print("==----------------------------==", "\n")
         print("1. Gerar Relatório")
         print("2. Excluir Relatório")
         print("3. Visualizar Relatórios")
         print("4. Sair")
 
         # Solicita ao usuário para escolher uma opção
-        opcao = input("Escolha uma opção: ")
+        opcao = input("\nEscolha uma opção: ")
 
         if opcao == '1':
             # Lista todas as turmas disponíveis
@@ -141,7 +143,7 @@ def main():
             visualizar_relatorios('relatorio_de_exportacao')
 
         elif opcao == '4':
-            print("Saindo do programa. Até mais!")
+            print("\nSaindo do programa. Até mais!", "\n")
             break
 
         else:
