@@ -3,7 +3,7 @@
 <p align = "center">
 <a href="#Objetivo">Objetivo</a> •
 <a href="#Sprint Backlog">Sprint Backlog</a> •
-<a href="#Fncionalidades">Funcionalidades</a> 
+<a href="#Funcionalidades">Funcionalidades</a> 
 </p>
 
 ##  🎯 Objetivo
