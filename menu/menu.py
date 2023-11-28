@@ -796,7 +796,7 @@ def gerenciar_notas():
                                 coluna_nota = 5 + qtd_ciclos*2 + i  # Após as colunas de peso e ciclos
 
                                 # Adicionar título da nota e valor na célula correspondente
-                                aba_turma_notas.cell(row=1, column=coluna_nota+1).value = f"NOTA C{ciclo_nome}"
+                                aba_turma_notas.cell(row=1, column=coluna_nota+1).value = f"SCORE C{ciclo_nome}"
                                 aba_turma_notas.cell(row=linha_aluno, column=coluna_nota+1).value = nota
 
                             print(f"\nScore do aluno '{cpf_aluno}' adicionadas/alteradas com sucesso.")
@@ -816,7 +816,7 @@ def gerenciar_notas():
     ultima_coluna_nota = coluna_nota + 1  # A última coluna onde uma nota foi adicionada
 
     #Adicionar título da coluna "MÉDIAS" na célula correspondente
-    aba_turma_notas.cell(row=1, column=ultima_coluna_nota + 1).value = "MÉDIAS"
+    aba_turma_notas.cell(row=1, column=ultima_coluna_nota + 1).value = "FEE"
 
     #Calcular as médias ponderadas e adicionar na coluna "MÉDIAS"
     for aluno, linha in dict_linhas_alunos.items():
@@ -864,7 +864,7 @@ def listar_medias(book):
 
             #Identificar a coluna "MÉDIAS"
             for cell in sheet[1]:
-                if cell.value == "MÉDIAS":
+                if cell.value == "FEE":
                     coluna_medias = cell.column
                     break
 
