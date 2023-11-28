@@ -18,9 +18,9 @@
 
 ## ⚙️ Funcionalidades
 ### Menu Principal
-https://github.com/Porygon-Users/API-Porygon/assets/143560101/a91a1b7f-78f9-48a1-8080-be3d79dab1d5
+https://github.com/Porygon-Users/API-Porygon/assets/142633184/fa14e1cd-33bd-4ac4-9612-a0a2304e59d0
 
 
 ### Relatórios
-https://github.com/Porygon-Users/API-Porygon/assets/143560101/ba60c7e0-4197-45a0-bc0c-5467bc3d1373
+https://github.com/Porygon-Users/API-Porygon/assets/142633184/84bea2fc-5096-4301-97b3-4cdbccf0a97b
 
