@@ -20,3 +20,13 @@
 
 ## ⚙️ Funcionalidades
 <a name="Funcionalidades"></a>
+
+### Fechamento de turmas
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/0795c9fd-253c-488c-a802-5dc9a89c471a
+
+### Criação de grupos
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/7225b8fc-ea95-4b52-9149-fd9951da24eb
+
+
+
+
