@@ -21,6 +21,11 @@
 
 ## ⚙️ Funcionalidades
 <a name="Funcionalidades"></a>
-### Criação de datas e ciclos
-https://github.com/Porygon-Users/API-Porygon/assets/145280630/311f0d9c-d8cd-4af7-bad6-4ecccb35dbad
+### Cadastro de alunos e professores
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/f5d8e4d6-156f-4a65-9db5-c0f14b53f4bc
 
+### Associação de alunos e professores
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/f5599770-ea14-4719-8584-2a3a158aa696
+
+### Criação de turmas
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/c06cee20-d000-4dc9-b9e0-07aa02b22cb4

@@ -21,8 +21,8 @@
 ## ⚙️ Funcionalidades
 <a name="Funcionalidades"></a>
 
-### Atribuição de notas
-https://github.com/Porygon-Users/API-Porygon/assets/145280630/92bff55f-70ed-4282-89ba-85c27c8b8810
+### Atribuição dos scores
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/34f9c175-3146-4c31-8f8f-605d96665b77
 
 ### Relatórios
 https://github.com/Porygon-Users/API-Porygon/assets/145280630/2fc32e39-2c54-49bb-af2e-1423dacb13fe
