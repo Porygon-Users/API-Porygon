@@ -21,8 +21,7 @@
 
 ## ⚙️ Funcionalidades
 <a name="Funcionalidades"></a>
-### Cadastro de alunos e professores
-https://github.com/Porygon-Users/API-Porygon/assets/143560101/f5d8e4d6-156f-4a65-9db5-c0f14b53f4bc
+
 
 ### Associação de alunos e professores
 https://github.com/Porygon-Users/API-Porygon/assets/143560101/f5599770-ea14-4719-8584-2a3a158aa696
