@@ -34,10 +34,6 @@
 > A PBLTeX, especializada em cursos práticos de ensino aplicando PBL (Problem Based Learning) utiliza uma técnica de ensino diferenciada e isso a diferente de outras
 instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos de entregas que por sua vez entregam os scores parciais de seus alunos para no final computar o FEE (Fator de Ensino Evolutivo). O desafio será de apoiar a instituição e desenvolver uma sistema de informação que viabilize a aplicação desta técnica diferenciada.
 
-## 📍Objetivo
-<a name="Objetivo"></a>
-> Desenvolver um Sistema de Informação, onde terá 3 niveis de acesso: Administrador, Professor e Aluno. Cada um terá um tipo de tela diferente. A tela do Administrador terá atribuições de criar as turmas, os grupos, definir o inicio e termino do semestre, fazer a importação e exportação dos dados. A tela do Professor terá atribuições como atribuir prazos de entregas, scores parciais. A tela do Aluno possibilitará ao usuário visualizar sua turma, grupo, membros do seu grupo e os scores parciais.
-
 ## 🔷 Requisitos Funcionais
 <a name="Requisitos Funcionais"></a>
 > • O SI deve possuir um controle de Turmas;<br />
@@ -49,7 +45,6 @@ instituições tradicionais já conceituadas no mercado. Ela trabalha com ciclos
 • O SI deve permitir a Configuração de parâmetros globai;s<br />
 • O SI deve permitir a exportação de dados consolidados, computados e métricas inferidas;<br />
 • O SI deve prover visibilidades objetivas e diretas que possibilitem o acompanhamento dos cursos providos pela PBLTeX.<br />
-
 
 ## ✅ Backlog do Produto
 <a name="Backlog do Produto"></a>
